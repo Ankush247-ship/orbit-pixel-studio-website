@@ -1,0 +1,39 @@
+# Orbit Pixel Studio
+
+> Orbit Pixel Studio is a digital solutions studio based in India, offering website development, SEO, social media marketing, lead generation, graphic design, video editing, AI content creation, and paid ads management for small and growing businesses.
+
+Orbit Pixel Studio brings strategy, creativity and technology together to help businesses build a digital presence and generate customers. Founded on the principle of Create · Innovate · Grow.
+
+## Services
+
+- [Website Development](https://orbitpixelstudio.in/services.html#web-dev): Modern, responsive, high-converting websites — starting ₹9,999/website
+- [SEO](https://orbitpixelstudio.in/services.html#seo): Keyword strategy, on-page SEO, technical audits, monthly reporting — starting ₹6,999/month
+- [Social Media Marketing](https://orbitpixelstudio.in/services.html#smm): Brand promotion and audience growth on social platforms — starting ₹4,999/month
+- [Lead Generation](https://orbitpixelstudio.in/services.html#leads): Smart campaigns and funnels for quality leads — starting ₹7,499/month
+- [Meta & Google Ads](https://orbitpixelstudio.in/services.html#ads): Targeted ad campaign management — starting ₹4,999/month management fee (ad spend separate)
+- [Graphic Design](https://orbitpixelstudio.in/services.html#design): Brand identity and marketing design — starting ₹499/design
+- [Video Editing](https://orbitpixelstudio.in/services.html#video-edit): Professional content editing — starting ₹799/video
+- [Video Shoot](https://orbitpixelstudio.in/services.html#video-shoot): On-location video shoots, up to 2 hours — starting ₹1,899/session
+- [AI Content Creation](https://orbitpixelstudio.in/services.html#ai-content): AI-powered content and reels — starting ₹999/content
+
+## Packages
+
+- [Starter](https://orbitpixelstudio.in/pricing.html) (₹7,999+): Business website, WhatsApp integration, basic SEO setup, mobile responsive design
+- [Growth](https://orbitpixelstudio.in/pricing.html) (₹14,999+, most popular): Website, SEO, social media, lead generation, analytics
+- [Custom](https://orbitpixelstudio.in/pricing.html) (custom quote): Website, AI automation, branding, marketing & ads, custom solutions
+
+## Pages
+
+- [Home](https://orbitpixelstudio.in/): Overview of services and business focus
+- [Services](https://orbitpixelstudio.in/services.html): Full breakdown of all 9 services with pricing
+- [Pricing](https://orbitpixelstudio.in/pricing.html): Package tiers and starting prices
+- [Portfolio](https://orbitpixelstudio.in/portfolio.html): Selected client work
+- [About](https://orbitpixelstudio.in/about.html): Mission and philosophy
+- [Contact](https://orbitpixelstudio.in/contact.html): Enquiry form, phone, WhatsApp, email
+
+## Contact
+
+- WhatsApp: https://wa.me/919529008060
+- Phone: +91 95290 08060
+- Email: harshadlimkar01@gmail.com
+- Service area: India

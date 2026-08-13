@@ -1,0 +1,97 @@
+/* ============================================================
+   ANIMATIONS — keyframes + GSAP-target base states
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   PROGRESSIVE ENHANCEMENT FOR SCROLL REVEALS
+   Default state (no JS, JS disabled, GSAP CDN blocked/slow/failed,
+   ScrollTrigger failed, or any runtime error) = fully visible.
+   Elements are ONLY hidden pre-animation once BOTH:
+     1) GSAP + ScrollTrigger have verifiably loaded and initialized
+     2) that JS has explicitly opted the element in via .gsap-anim-ready
+        on <html> (set in animations.js after a successful try/catch)
+   This guarantees content can never get stuck invisible. See
+   animations.js + the inline watchdog script in each page's <head>
+   for the corresponding logic.
+   ------------------------------------------------------------ */
+[data-reveal],
+[data-reveal-fade],
+[data-reveal-scale],
+[data-reveal-item]{ opacity: 1; transform: none; }
+
+.gsap-anim-ready [data-reveal]{ opacity: 0; transform: translateY(46px); }
+.gsap-anim-ready [data-reveal-fade]{ opacity: 0; }
+.gsap-anim-ready [data-reveal-scale]{ opacity: 0; transform: scale(.92); }
+.gsap-anim-ready [data-reveal-item]{ opacity: 0; transform: translateY(30px); }
+
+.js-ready [data-reveal],
+.js-ready [data-reveal-fade],
+.js-ready [data-reveal-scale],
+.js-ready [data-reveal-item]{ will-change: transform, opacity; }
+
+/* belt-and-suspenders: if JS is fully disabled, <html> never gets
+   .gsap-anim-ready in the first place, so the base rule above already
+   applies — this simply documents/reinforces that guarantee. */
+.no-js [data-reveal],
+.no-js [data-reveal-fade],
+.no-js [data-reveal-scale],
+.no-js [data-reveal-item]{ opacity:1 !important; transform:none !important; }
+
+/* ultimate safety valve: if the watchdog in the page <head> detects
+   reveal elements are still hidden after a timeout (GSAP loaded but
+   ScrollTrigger never fired, animation errored mid-way, etc.) it adds
+   this class to force everything visible again. */
+.reveal-fallback [data-reveal],
+.reveal-fallback [data-reveal-fade],
+.reveal-fallback [data-reveal-scale],
+.reveal-fallback [data-reveal-item]{ opacity:1 !important; transform:none !important; }
+
+.split-word, .split-line{ display:inline-block; overflow:hidden; }
+.split-word > span, .split-line > span{ display:inline-block; transform: translateY(110%); }
+
+@keyframes floaty{
+  0%, 100%{ transform: translateY(0); }
+  50%{ transform: translateY(-14px); }
+}
+.floaty{ animation: floaty 6s ease-in-out infinite; }
+.floaty-slow{ animation: floaty 8s ease-in-out infinite; }
+.floaty-delay{ animation-delay: 1.4s; }
+.floaty-delay-2{ animation-delay: 2.6s; }
+
+@keyframes drift{
+  0%{ transform: translate(0,0); }
+  50%{ transform: translate(18px,-24px); }
+  100%{ transform: translate(0,0); }
+}
+
+@keyframes pulseGlow{
+  0%,100%{ opacity:.45; }
+  50%{ opacity:.75; }
+}
+.glow{ animation: pulseGlow 7s ease-in-out infinite; }
+
+@keyframes ticker{
+  0%{ background-position: 0% 50%; }
+  100%{ background-position: 200% 50%; }
+}
+.grad-text.animated{ animation: ticker 6s linear infinite; }
+
+@keyframes marquee{
+  0%{ transform: translateX(0); }
+  100%{ transform: translateX(-50%); }
+}
+
+/* count-up target */
+.stat-num[data-count]{ font-variant-numeric: tabular-nums; }
+
+/* magnetic button wrapper needs relative positioning (handled inline via JS transform) */
+.magnetic{ display:inline-flex; }
+
+/* Lenis smoothness helper */
+html.lenis, html.lenis body{ height:auto; }
+.lenis.lenis-smooth{ scroll-behavior:auto !important; }
+.lenis.lenis-stopped{ overflow:hidden; }
+
+/* mobile menu open state (JS toggles via GSAP but base visibility guard) */
+.mobile-menu.is-open{ visibility: visible; }
+body.menu-open{ overflow:hidden; }

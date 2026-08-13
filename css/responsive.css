@@ -1,0 +1,113 @@
+/* ============================================================
+   RESPONSIVE — tablet (≤1024px) and mobile (≤680px)
+   ============================================================ */
+
+/* ---------------- TABLET ---------------- */
+@media (max-width: 1024px){
+  :root{ --space-6: 4rem; --space-7: 6rem; }
+
+  .nav-links{ display:none; }
+  .nav-cta.desktop-only{ display:none; }
+  .hamburger{ display:flex; }
+
+  .hero-grid{ grid-template-columns: 1fr; }
+  .hero-visual{ height: 340px; order:-1; }
+  .hero{ padding-top: 7.5rem; min-height:auto; padding-bottom: var(--space-5); }
+  .hero-orbit-wrap{ width:280px; height:280px; }
+  .hero-orbit-wrap img{ width:140px; height:140px; }
+  .float-card{ font-size:.72rem; padding:.55rem .8rem; }
+  .float-card.fc1{ left:2%; }
+  .float-card.fc2{ right:0; }
+  .float-card.fc3{ left:0; }
+  .float-card.fc4{ right:2%; }
+
+  .stats-grid{ grid-template-columns: repeat(2,1fr); }
+  .services-grid{ grid-template-columns: repeat(2,1fr); }
+  .why-grid{ grid-template-columns: repeat(2,1fr); }
+  .portfolio-grid{ grid-template-columns: 1fr; }
+  .philosophy-grid{ grid-template-columns: 1fr; }
+  .pricing-grid{ grid-template-columns: 1fr; max-width:480px; margin-inline:auto; }
+  .price-card.featured{ transform:none; }
+  .contact-direct{ grid-template-columns: 1fr; }
+  .footer-grid{ grid-template-columns: 1.2fr 1fr 1fr; }
+  .mission-split{ grid-template-columns: 1fr; }
+  .split{ grid-template-columns: 1fr; }
+
+  .service-detail-card{ grid-template-columns: auto 1fr; }
+  .service-detail-card > div:last-child{ grid-column: 1 / -1; text-align:left !important; margin-top:.5rem; display:flex; align-items:center; gap:1rem; }
+
+  .process-track{ flex-direction:column; gap: var(--space-4); }
+  .process-line{ top:0; left:22px; right:auto; bottom:0; width:1px; height:100%; }
+  .process-line-fill{ width:100%; height:0%; }
+  .process-step{ flex-direction:row; align-items:flex-start; }
+
+  .form-grid{ grid-template-columns: 1fr; }
+}
+
+/* ---------------- MOBILE ---------------- */
+@media (max-width: 680px){
+  .wrap{ padding-inline: 1.15rem; }
+  .section{ padding-block: var(--space-5); }
+
+  .navbar{ padding: 1rem 0; }
+  .brand img{ height:34px; width:34px; }
+  .brand-name{ font-size:.9rem; }
+  .brand-name span{ font-size:.55rem; }
+
+  .hero{ padding-top: 6.5rem; }
+  .hero h1{ font-size: clamp(2rem, 9vw, 2.6rem); }
+  .hero-ctas{ flex-direction:column; align-items:stretch; }
+  .hero-ctas .btn{ justify-content:center; }
+  .hero-visual{ height:280px; }
+  .hero-orbit-wrap{ width:220px; height:220px; }
+  .hero-orbit-wrap img{ width:108px; height:108px; }
+  .float-card{ display:none; }
+  .float-card.fc1, .float-card.fc4{ display:flex; position:static; margin: .4rem auto 0; }
+  .hero-visual{ flex-direction:column; gap:.6rem; }
+
+  .stats-grid{ grid-template-columns: 1fr 1fr; gap: .8rem; }
+  .stat-card{ padding: 1.3rem; }
+  .stat-num{ font-size:1.7rem; }
+
+  .services-grid{ grid-template-columns: 1fr; }
+  .why-grid{ grid-template-columns: 1fr; }
+  .philosophy-grid{ grid-template-columns: 1fr; }
+  .contact-direct{ grid-template-columns: 1fr; }
+
+  .footer-grid{ grid-template-columns: 1fr 1fr; gap: 2rem 1rem; }
+  .footer-brand{ grid-column: 1 / -1; }
+  .footer-bottom{ flex-direction:column; align-items:flex-start; }
+
+  .cta-btns{ flex-direction:column; width:100%; }
+  .cta-btns .btn{ justify-content:center; }
+  .cta-bigtype{ font-size: 5rem; }
+
+  .pricing-note{ flex-direction:column; }
+
+  .about-hero-logo img{ width: 62vw; }
+
+  .service-row{ flex-direction:column; align-items:flex-start; gap:.7rem; padding: 1.1rem 1.15rem; }
+  .service-row-price{ align-self:flex-end; }
+
+  .service-detail-card{ grid-template-columns: 1fr; text-align:left; }
+  .service-detail-card > div:last-child{ grid-column: 1; text-align:left !important; flex-direction:column; align-items:flex-start; gap:.4rem; }
+
+  /* horizontal portfolio slider on mobile */
+  .portfolio-grid.slider{
+    display:flex; overflow-x:auto; scroll-snap-type:x mandatory;
+    gap: 1rem; margin-inline: -1.15rem; padding-inline: 1.15rem;
+    padding-bottom: .5rem;
+  }
+  .portfolio-grid.slider .portfolio-card{ min-width: 82vw; scroll-snap-align:start; }
+
+  .filter-bar{ flex-wrap:nowrap; overflow-x:auto; padding-bottom:.3rem; }
+  .filter-btn{ flex-shrink:0; }
+
+  .mobile-menu-links a{ font-size:1.7rem; }
+
+  h2.h-section{ font-size: clamp(1.6rem, 7vw, 2.1rem); }
+}
+
+@media (max-width: 400px){
+  .stats-grid{ grid-template-columns: 1fr 1fr; }
+}

@@ -579,7 +579,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .form-status.err{ color: var(--red); }
 
 /* ============ CONTACT DIRECT OPTIONS ============ */
-.contact-direct{ display:grid; grid-template-columns: repeat(3,1fr); gap: var(--space-3); }
+.contact-direct{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-3); }
 .direct-card{ padding: var(--space-4); text-align:left; display:flex; flex-direction:column; gap:.9rem; }
 .direct-icon{ width:46px; height:46px; border-radius: var(--r-md); background: var(--spectrum-soft); border:1px solid var(--hairline); display:flex; align-items:center; justify-content:center; }
 .direct-icon svg{ width:20px; height:20px; }

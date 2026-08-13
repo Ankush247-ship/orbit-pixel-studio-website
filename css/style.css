@@ -702,3 +702,8 @@ hr.hair{ border:none; border-top:1px solid var(--hairline); margin-block: var(--
 .pv{ position:absolute; inset:0; }
 .pv-mesh{ position:absolute; inset:0; opacity:.9; }
 .pv-grid{ position:absolute; inset:0; background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px); background-size: 26px 26px; opacity:.5; }
+
+/* homepage services preview: show first 2 by default, rest revealed via "Show More" */
+.services-grid .service-extra{ display:none; }
+.services-grid.services-expanded .service-extra{ display:flex; }
+#services-toggle.is-expanded svg{ transform: rotate(180deg); }

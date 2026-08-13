@@ -100,4 +100,20 @@
   document.querySelectorAll('[data-year]').forEach(function (el) {
     el.textContent = new Date().getFullYear();
   });
+
+  /* ---------- homepage services "Show More" toggle ---------- */
+  var servicesToggle = document.getElementById('services-toggle');
+  var servicesGrid = document.querySelector('.services-grid');
+  if (servicesToggle && servicesGrid) {
+    servicesToggle.addEventListener('click', function () {
+      var expanded = servicesGrid.classList.toggle('services-expanded');
+      servicesToggle.classList.toggle('is-expanded', expanded);
+      servicesToggle.innerHTML = expanded
+        ? 'Show Less <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;margin-left:.4rem;transition:transform .3s var(--ease);"><path d="M6 9l6 6 6-6"/></svg>'
+        : 'Show More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;margin-left:.4rem;transition:transform .3s var(--ease);"><path d="M6 9l6 6 6-6"/></svg>';
+      if (!expanded) {
+        servicesGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
 })();

@@ -718,6 +718,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   overflow:hidden;
 }
 .hero-grid{ display:grid; grid-template-columns: 1.05fr .95fr; gap: var(--space-5); align-items:center; }
+.hero-body{ width:100%; }
 .hero-badge{ margin-bottom: var(--space-3); }
 .hero h1{ font-size: clamp(2.6rem, 5.6vw, 4.4rem); }
 .hero .lead{ margin-top: var(--space-3); max-width: 42ch; }
@@ -725,7 +726,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .hero-trust{ display:flex; align-items:center; gap:.6rem; margin-top: var(--space-4); color: var(--mute); font-size:.86rem; }
 
 .hero-visual{ position:relative; height: 460px; display:flex; align-items:center; justify-content:center; }
-.hero-orbit-wrap{ position:relative; width: 380px; height: 380px; display:flex; align-items:center; justify-content:center; }
+.hero-orbit-wrap{ position:relative; z-index:3; width: 380px; height: 380px; display:flex; align-items:center; justify-content:center; transition: transform .1s linear; }
+.hero-cursor-glow{
+  position:absolute; top:0; left:0; z-index:1;
+  width: 260px; height: 260px;
+  border-radius:50%;
+  background: radial-gradient(circle, rgba(139,92,246,.22), transparent 70%);
+  pointer-events:none;
+  will-change: transform;
+}
+.float-card{ transition: transform .1s linear; }
 .hero-orbit-wrap img{ width: 190px; height:190px; border-radius:50%; position:relative; z-index:3; box-shadow: 0 0 80px -10px rgba(139,92,246,.5); }
 
 .float-card{
@@ -741,6 +751,76 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .float-card.fc3{ bottom: 22%; left: -16%; }
 .float-card.fc4{ bottom: -2%; right: -4%; }
 .float-card.fc5{ top: 58%; left: 30%; }
+
+/* ---- rich dashboard cards (hero interface) ---- */
+.interface-lines{
+  position:absolute; inset:0; width:100%; height:100%;
+  z-index:2; overflow:visible; pointer-events:none;
+}
+.interface-lines .ln{
+  fill:none; stroke: rgba(255,255,255,.16); stroke-width:1;
+  vector-effect: non-scaling-stroke;
+}
+.float-card-rich{ padding:.65rem .9rem .65rem .65rem; gap:.65rem; max-width:180px; }
+.fc-icon{
+  flex-shrink:0; width:32px; height:32px; border-radius:10px;
+  display:flex; align-items:center; justify-content:center;
+  background: rgba(255,255,255,.06); border:1px solid var(--hairline-2);
+}
+.fc-icon svg{ width:16px; height:16px; }
+.fc-icon-blue{ color: var(--blue); }
+.fc-icon-green{ color: var(--green); }
+.fc-icon-magenta{ color: var(--magenta); }
+.fc-icon-purple{ color: var(--purple); }
+.fc-icon-orange{ color: var(--orange); }
+.fc-text{ display:flex; flex-direction:column; gap:.1rem; line-height:1.25; }
+.fc-text strong{ font-size:.8rem; font-weight:700; color:#fff; }
+.fc-text em{ font-style:normal; font-size:.68rem; color: var(--mute); font-weight:500; }
+
+/* ---- service-area route strip ---- */
+.hero-route{ position:relative; z-index:3; margin-top: var(--space-6); }
+.route-track{ position:relative; height: 64px; }
+.route-line{ position:absolute; inset:0; width:100%; height:100%; overflow:visible; }
+.route-path{
+  fill:none; stroke: rgba(255,255,255,.14); stroke-width:1.5;
+  vector-effect: non-scaling-stroke;
+}
+.route-dot{
+  position:absolute; top:50%; left:1.5%;
+  width:8px; height:8px; margin:-4px 0 0 -4px;
+  border-radius:50%;
+  background: var(--cyan);
+  box-shadow: 0 0 14px 4px var(--cyan);
+  z-index:3;
+}
+.route-node{
+  position:absolute; top:50%; translate: -50% -50%;
+  display:flex; flex-direction:column; align-items:center; gap:.5rem;
+  z-index:2;
+}
+.route-pulse{
+  position:relative; width:9px; height:9px; border-radius:50%;
+  background: var(--ink-soft);
+  border: 1px solid rgba(255,255,255,.5);
+  transition: transform .3s var(--ease), background .3s var(--ease);
+}
+.route-pulse::after{
+  content:''; position:absolute; inset:-6px; border-radius:50%;
+  border:1px solid rgba(255,255,255,.25);
+  animation: route-ping 2.6s ease-out infinite;
+}
+.route-node label{
+  font-family: var(--font-mono); font-size:.64rem; letter-spacing:.03em;
+  color: var(--mute); white-space:nowrap;
+  transition: color .3s var(--ease);
+}
+.route-node:hover .route-pulse{ transform: scale(1.5); background: var(--cyan); }
+.route-node:hover label{ color:#fff; }
+@keyframes route-ping{
+  0%{ transform:scale(.6); opacity:.9; }
+  100%{ transform:scale(1.8); opacity:0; }
+}
+.route-caption{ margin-top: var(--space-3); text-align:center; color: var(--mute); font-size:.82rem; }
 
 /* page hero (subpages) */
 .page-hero{

@@ -91,8 +91,59 @@
 
     var floatCards = hero.querySelectorAll('.float-card');
     if (floatCards.length) tl.from(floatCards, { opacity: 0, y: 20, scale: .85, stagger: .08, duration: .6 }, 1.1);
+
+    /* connecting lines behind the floating cards draw in after the cards land */
+    var lines = hero.querySelectorAll('.interface-lines .ln');
+    if (lines.length && !isMobile) {
+      lines.forEach(function (line) {
+        try {
+          var len = line.getTotalLength();
+          gsap.set(line, { strokeDasharray: len, strokeDashoffset: len });
+        } catch (e) { /* getTotalLength unsupported: leave line static */ }
+      });
+      tl.to(lines, { strokeDashoffset: 0, duration: .9, stagger: .07, ease: 'power2.out' }, 1.25);
+    }
+
+    /* service-area route: draw the line, then pop in each node */
+    var routePath = hero.querySelector('[data-route-path]');
+    var routeNodes = hero.querySelectorAll('[data-route-node]');
+    var routeDot = hero.querySelector('[data-route-dot]');
+    if (routePath && routeNodes.length) {
+      try {
+        var routeLen = routePath.getTotalLength();
+        gsap.set(routePath, { strokeDasharray: routeLen, strokeDashoffset: routeLen });
+        tl.to(routePath, { strokeDashoffset: 0, duration: 1.1, ease: 'power2.inOut' }, 1.5);
+      } catch (e) { /* fall through to node reveal only */ }
+      gsap.set(routeNodes, { opacity: 0, scale: .4 });
+      tl.to(routeNodes, { opacity: 1, scale: 1, duration: .4, stagger: .06, ease: 'back.out(2)' }, 1.7);
+      if (routeDot) tl.from(routeDot, { opacity: 0, duration: .3 }, 1.6);
+    }
   }
   heroSequence();
+
+  /* ============ ROUTE: continuous travelling light (desktop, motion-safe only) ============ */
+  function routeTravelLoop() {
+    if (isMobile || reduceMotion) return;
+    var dot = document.querySelector('[data-route-dot]');
+    var nodes = document.querySelectorAll('[data-route-node]');
+    if (!dot || !nodes.length) return;
+
+    var stops = Array.prototype.map.call(nodes, function (n) {
+      return parseFloat(n.style.left) || 0;
+    });
+
+    var tl = gsap.timeline({ repeat: -1, delay: 2.5 });
+    stops.forEach(function (pct, i) {
+      if (i === 0) return;
+      tl.to(dot, { left: pct + '%', duration: 1.1, ease: 'power1.inOut' })
+        .to(dot, { duration: .35 }); // brief pause at each city
+    });
+    tl.to(dot, { left: stops[0] + '%', duration: 1.1, ease: 'power1.inOut' })
+      .to(dot, { duration: .6 });
+
+    window.__orbitRouteTravel = tl;
+  }
+  routeTravelLoop();
 
   /* ============ PAGE HERO (subpages) SEQUENCE ============ */
   function pageHeroSequence() {

@@ -15,11 +15,20 @@
   .hero{ padding-top: 7.5rem; min-height:auto; padding-bottom: var(--space-5); }
   .hero-orbit-wrap{ width:280px; height:280px; }
   .hero-orbit-wrap img{ width:140px; height:140px; }
+  .interface-lines{ display:none; }
   .float-card{ font-size:.72rem; padding:.55rem .8rem; }
   .float-card.fc1{ left:2%; }
   .float-card.fc2{ right:0; }
   .float-card.fc3{ left:0; }
   .float-card.fc4{ right:2%; }
+  .float-card.fc5{ display:none; }
+  .float-card-rich{ max-width:150px; }
+  .fc-icon{ width:28px; height:28px; }
+  .fc-icon svg{ width:14px; height:14px; }
+  .fc-text strong{ font-size:.74rem; }
+  .fc-text em{ font-size:.62rem; }
+
+  .hero-route{ margin-top: var(--space-5); }
 
   .stats-grid{ grid-template-columns: repeat(2,1fr); }
   .services-grid{ grid-template-columns: repeat(2,1fr); }
@@ -67,6 +76,20 @@
   .float-card{ display:none; }
   .float-card.fc1, .float-card.fc4{ display:flex; position:static; margin: .4rem auto 0; }
   .hero-visual{ flex-direction:column; gap:.6rem; }
+  .float-card-rich{ max-width:none; width:100%; justify-content:center; }
+
+  /* simplified service-area route on mobile: horizontal scroll, no draw animation */
+  .hero-route{ margin-top: var(--space-4); }
+  .route-track{
+    overflow-x:auto; -webkit-overflow-scrolling:touch;
+    display:flex; align-items:center; gap: 2.4rem;
+    height:auto; padding: .6rem 1.4rem;
+    scroll-snap-type:x proximity;
+  }
+  .route-line{ display:none; }
+  .route-dot{ display:none; }
+  .route-node{ position:static; translate:none; transform:none; flex-shrink:0; scroll-snap-align:start; }
+  .route-caption{ font-size:.76rem; padding-inline: 1.15rem; }
 
   .stats-grid{ grid-template-columns: 1fr 1fr; gap: .8rem; }
   .stat-card{ padding: 1.3rem; }

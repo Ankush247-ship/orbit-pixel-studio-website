@@ -76,6 +76,74 @@
     document.addEventListener('mouseup', function () { ring.style.opacity = '1'; });
   }
 
+  /* ---------- hero interface: desktop-only cursor parallax ---------- */
+  (function heroParallax() {
+    var hero = document.querySelector('[data-hero-interface]');
+    if (!hero) return;
+
+    var mql = window.matchMedia('(hover: hover) and (pointer: fine)');
+    var cards = hero.querySelectorAll('.float-card');
+    var orbitWrap = hero.querySelector('.hero-orbit-wrap');
+    var glow = null;
+    var raf = null;
+    var tx = 0, ty = 0, cx = 0, cy = 0;
+    var active = false;
+
+    function onMove(e) {
+      var rect = hero.getBoundingClientRect();
+      // -1..1 range from hero center
+      tx = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+      ty = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+      if (glow) {
+        glow.style.transform = 'translate3d(' + (e.clientX - rect.left) + 'px,' + (e.clientY - rect.top) + 'px,0) translate(-50%,-50%)';
+      }
+    }
+
+    function loop() {
+      cx += (tx - cx) * 0.08;
+      cy += (ty - cy) * 0.08;
+      cards.forEach(function (card, i) {
+        var depth = 6 + (i % 3) * 3;
+        card.style.transform = 'translate(' + (cx * depth) + 'px,' + (cy * depth) + 'px)';
+      });
+      if (orbitWrap) {
+        orbitWrap.style.transform = 'translate(' + (cx * -6) + 'px,' + (cy * -6) + 'px)';
+      }
+      raf = requestAnimationFrame(loop);
+    }
+
+    function enable() {
+      if (active || reduceMotion) return;
+      active = true;
+      glow = document.createElement('div');
+      glow.className = 'hero-cursor-glow';
+      hero.appendChild(glow);
+      hero.addEventListener('mousemove', onMove);
+      loop();
+    }
+
+    function disable() {
+      if (!active) return;
+      active = false;
+      hero.removeEventListener('mousemove', onMove);
+      if (raf) cancelAnimationFrame(raf);
+      raf = null;
+      tx = ty = cx = cy = 0;
+      cards.forEach(function (card) { card.style.transform = ''; });
+      if (orbitWrap) orbitWrap.style.transform = '';
+      if (glow && glow.parentNode) glow.parentNode.removeChild(glow);
+      glow = null;
+    }
+
+    function handleCapabilityChange() {
+      if (mql.matches) enable(); else disable();
+    }
+
+    handleCapabilityChange();
+    if (mql.addEventListener) mql.addEventListener('change', handleCapabilityChange);
+    else if (mql.addListener) mql.addListener(handleCapabilityChange); // older Safari
+  })();
+
   /* ---------- ambient particles ---------- */
   document.querySelectorAll('.particles').forEach(function (field) {
     var count = window.innerWidth < 680 ? 14 : 28;

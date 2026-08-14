@@ -534,6 +534,70 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .portfolio-card:hover .portfolio-link{ opacity:1; transform:translateY(0); }
 .portfolio-link svg{ width:14px; height:14px; }
 
+/* ============ WORK (real client projects) ============ */
+.work-grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+.work-card{
+  position:relative; display:flex; flex-direction:column;
+  border-radius: var(--r-lg); overflow:hidden;
+  border: 1px solid var(--hairline);
+  background: var(--panel);
+  text-decoration:none; color:inherit;
+  transition: border-color .4s var(--ease), transform .4s var(--ease);
+}
+.work-card:hover{ border-color: rgba(255,255,255,.22); transform: translateY(-4px); }
+.work-featured{ grid-column: 1 / -1; flex-direction: row; min-height: 340px; }
+.work-featured-tag{
+  position:absolute; top: var(--space-3); left: var(--space-3); z-index:3;
+  font-family: var(--font-mono); font-size:.68rem; letter-spacing:.12em; text-transform:uppercase;
+  padding:.4rem .8rem; border-radius: 999px;
+  background: rgba(5,5,5,.6); border:1px solid rgba(255,255,255,.18); color:#fff;
+  backdrop-filter: blur(6px);
+}
+.work-media{ position:relative; flex:1 1 55%; overflow:hidden; min-height: 220px; background: var(--deep); }
+.work-img{ width:100%; height:100%; object-fit:cover; display:block; transition: transform .8s var(--ease); }
+.work-card:hover .work-img{ transform: scale(1.05); }
+.work-media-fade{ position:absolute; inset:0; background: linear-gradient(90deg, transparent 55%, var(--panel) 100%); }
+.work-featured .work-info{ flex:1 1 45%; padding: var(--space-4); display:flex; flex-direction:column; justify-content:center; }
+
+.work-info{ padding: var(--space-4); display:flex; flex-direction:column; gap:.3rem; }
+.work-cat{ font-family: var(--font-mono); font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color: var(--mute); }
+.work-card h3{ font-size:1.35rem; margin: .3rem 0 .2rem; }
+.work-featured h3{ font-size:1.7rem; }
+.work-info p{ color: var(--mute); font-size:.88rem; max-width:44ch; }
+.work-services{ display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.7rem; }
+.work-services span{
+  font-family: var(--font-mono); font-size:.68rem; letter-spacing:.04em;
+  padding:.25rem .6rem; border-radius: 999px; border:1px solid var(--hairline); color: var(--mute);
+}
+.work-link{
+  display:inline-flex; align-items:center; gap:.4rem; margin-top:1rem;
+  font-size:.86rem; font-weight:600; color:#fff;
+}
+.work-link svg{ width:14px; height:14px; transition: transform .3s var(--ease); }
+.work-card:hover .work-link svg{ transform: translate(3px,-3px); }
+
+/* per-project monogram visual treatment (used where no real screenshot is available yet) */
+.work-media-mono{ min-height:200px; display:flex; align-items:center; justify-content:center; }
+.work-mono-mark{
+  position:relative; z-index:2; font-family:var(--font-display,inherit); font-weight:800;
+  font-size:2.6rem; letter-spacing:.02em; color:#fff; opacity:.92;
+}
+.work-mono-grid{
+  position:absolute; inset:0;
+  background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
+  background-size: 24px 24px; opacity:.5;
+}
+.work-tone-interior .work-media-mono{ background: radial-gradient(circle at 30% 20%, rgba(251,146,60,.35), transparent 55%), radial-gradient(circle at 80% 80%, rgba(139,92,246,.3), transparent 55%), var(--deep); }
+.work-tone-beauty .work-media-mono{ background: radial-gradient(circle at 70% 20%, rgba(236,72,153,.4), transparent 55%), radial-gradient(circle at 20% 80%, rgba(34,211,238,.3), transparent 55%), var(--deep); }
+.work-tone-catering .work-media-mono{ background: radial-gradient(circle at 30% 70%, rgba(34,197,94,.35), transparent 55%), radial-gradient(circle at 80% 30%, rgba(251,146,60,.3), transparent 55%), var(--deep); }
+.work-tone-events .work-media-mono{ background: radial-gradient(circle at 60% 30%, rgba(139,92,246,.4), transparent 55%), radial-gradient(circle at 20% 70%, rgba(236,72,153,.3), transparent 55%), var(--deep); }
+
+
 .filter-bar{ display:flex; gap:.6rem; flex-wrap:wrap; margin-bottom: var(--space-4); }
 .filter-btn{
   padding:.6rem 1.15rem; border-radius: var(--r-pill);

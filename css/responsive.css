@@ -25,6 +25,9 @@
   .services-grid{ grid-template-columns: repeat(2,1fr); }
   .why-grid{ grid-template-columns: repeat(2,1fr); }
   .portfolio-grid{ grid-template-columns: 1fr; }
+  .work-grid{ grid-template-columns: 1fr; }
+  .work-featured{ flex-direction: column; }
+  .work-featured .work-info{ padding: var(--space-4); }
   .philosophy-grid{ grid-template-columns: 1fr; }
   .pricing-grid{ grid-template-columns: 1fr; max-width:480px; margin-inline:auto; }
   .price-card.featured{ transform:none; }
@@ -102,6 +105,13 @@
 
   .filter-bar{ flex-wrap:nowrap; overflow-x:auto; padding-bottom:.3rem; }
   .filter-btn{ flex-shrink:0; }
+
+  /* work (real projects): plain vertical stack on mobile, no hover-dependent info */
+  .work-grid{ grid-template-columns: 1fr; gap: var(--space-3); }
+  .work-featured{ flex-direction:column; min-height:auto; }
+  .work-media{ min-height: 200px; }
+  .work-card:hover{ transform:none; }
+  .work-card:hover .work-img{ transform:none; }
 
   .mobile-menu-links a{ font-size:1.7rem; }
 

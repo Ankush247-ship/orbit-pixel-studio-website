@@ -247,16 +247,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .card:hover::before{ opacity:1; }
 
 /* ============ BACKGROUND SYSTEM ============ */
-.bg-grid{
-  position:absolute; inset:0;
-  background-image:
-    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
-  background-size: 64px 64px;
-  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 20%, #000 30%, transparent 80%);
-  mask-image: radial-gradient(ellipse 80% 60% at 50% 20%, #000 30%, transparent 80%);
-  pointer-events:none;
-}
 .glow{
   position:absolute; border-radius:50%;
   filter: blur(90px);
@@ -364,7 +354,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   visibility: hidden;
   opacity: 0;
 }
-.mobile-menu .bg-grid{ opacity:.5; }
 .mobile-menu-links{ display:flex; flex-direction:column; gap:1.1rem; position:relative; z-index:2; }
 .mobile-menu-links a{
   font-family: var(--font-display); font-size: 2.1rem; font-weight:600; color: var(--ink);
@@ -634,11 +623,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position:relative; z-index:2; font-family:var(--font-display,inherit); font-weight:800;
   font-size:2.6rem; letter-spacing:.02em; color:#fff; opacity:.92;
 }
-.work-mono-grid{
-  position:absolute; inset:0;
-  background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
-  background-size: 24px 24px; opacity:.5;
-}
 .work-tone-interior .work-mono-tint{ background: radial-gradient(circle at 30% 20%, rgba(251,146,60,.35), transparent 55%), radial-gradient(circle at 80% 80%, rgba(139,92,246,.3), transparent 55%); }
 .work-tone-beauty .work-mono-tint{ background: radial-gradient(circle at 70% 20%, rgba(236,72,153,.4), transparent 55%), radial-gradient(circle at 20% 80%, rgba(34,211,238,.3), transparent 55%); }
 .work-tone-catering .work-mono-tint{ background: radial-gradient(circle at 30% 70%, rgba(34,197,94,.35), transparent 55%), radial-gradient(circle at 80% 30%, rgba(251,146,60,.3), transparent 55%); }
@@ -902,7 +886,6 @@ hr.hair{ border:none; border-top:1px solid var(--hairline); margin-block: var(--
 }
 .portfolio-card:hover .pv-photo{ filter: grayscale(40%) brightness(.6) contrast(1.15); }
 .pv-mesh{ position:absolute; inset:0; opacity:.85; mix-blend-mode: screen; }
-.pv-grid{ position:absolute; inset:0; background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px); background-size: 26px 26px; opacity:.5; }
 
 /* homepage services preview: show first 2 by default, rest revealed via "Show More" */
 .services-grid .service-extra{ display:none; }

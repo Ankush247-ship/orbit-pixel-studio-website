@@ -34,6 +34,8 @@
   .services-grid{ grid-template-columns: repeat(2,1fr); }
   .why-grid{ grid-template-columns: repeat(2,1fr); }
   .portfolio-grid{ grid-template-columns: 1fr; }
+  .portfolio-stats{ gap:.5rem; }
+  .portfolio-stat-pill{ padding:.55rem .9rem; }
   .work-grid{ grid-template-columns: 1fr; }
   .work-featured{ flex-direction: column; }
   .work-featured .work-info{ padding: var(--space-4); }
@@ -129,6 +131,11 @@
   .filter-bar{ flex-wrap:nowrap; overflow-x:auto; padding-bottom:.3rem; }
   .filter-btn{ flex-shrink:0; }
 
+  .portfolio-stats{ flex-wrap:nowrap; overflow-x:auto; padding-bottom:.3rem; margin-inline:-1.15rem; padding-inline:1.15rem; }
+  .portfolio-stat-pill{ flex-shrink:0; }
+  .portfolio-count{ padding:.4rem .65rem; }
+  .portfolio-count span{ font-size:.9rem; }
+
   /* work (real projects): plain vertical stack on mobile, no hover-dependent info */
   .work-grid{ grid-template-columns: 1fr; gap: var(--space-3); }
   .work-featured{ flex-direction:column; min-height:auto; }
@@ -143,4 +150,8 @@
 
 @media (max-width: 400px){
   .stats-grid{ grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 1024px){
+  .project-detail-grid{ grid-template-columns: 1fr; }
 }

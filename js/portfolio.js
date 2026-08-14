@@ -6,7 +6,7 @@
   var grid = document.querySelector('[data-portfolio-grid]');
   if (!bar || !grid) return;
 
-  var cards = grid.querySelectorAll('.portfolio-card');
+  var cards = grid.querySelectorAll('.work-card, .portfolio-card');
   var buttons = bar.querySelectorAll('.filter-btn');
 
   function applyFilter(cat) {
@@ -27,11 +27,26 @@
     });
   }
 
+  function selectFilter(cat, opts) {
+    var target = bar.querySelector('.filter-btn[data-filter="' + cat + '"]') || bar.querySelector('.filter-btn[data-filter="all"]');
+    if (!target) return;
+    buttons.forEach(function (b) { b.classList.remove('active'); });
+    target.classList.add('active');
+    applyFilter(target.getAttribute('data-filter'));
+    if (opts && opts.scroll) {
+      grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
   buttons.forEach(function (btn) {
     btn.addEventListener('click', function () {
-      buttons.forEach(function (b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      applyFilter(btn.getAttribute('data-filter'));
+      selectFilter(btn.getAttribute('data-filter'));
     });
   });
+
+  /* pick up an initial category from the URL, e.g. portfolio.html#branding */
+  var initialCat = (window.location.hash || '').replace('#', '');
+  if (initialCat) {
+    selectFilter(initialCat, { scroll: true });
+  }
 })();

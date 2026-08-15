@@ -32,6 +32,9 @@
 
   .stats-grid{ grid-template-columns: repeat(2,1fr); }
   .services-grid{ grid-template-columns: repeat(2,1fr); }
+  .services-grid-compact{ grid-template-columns: repeat(2,1fr); }
+  .service-feature{ grid-template-columns: 1fr; }
+  .service-feature-visual{ order:-1; }
   .why-grid{ grid-template-columns: repeat(2,1fr); }
   .portfolio-grid{ grid-template-columns: 1fr; }
   .portfolio-stats{ gap:.5rem; }
@@ -98,6 +101,9 @@
   .stat-num{ font-size:1.7rem; }
 
   .services-grid{ grid-template-columns: 1fr; }
+  .services-grid-compact{ grid-template-columns: 1fr 1fr; gap:.7rem; }
+  .service-card-compact{ min-height:170px; padding:1rem; }
+  .service-ai-strip{ flex-direction:column; align-items:flex-start; }
   .why-grid{ grid-template-columns: 1fr; }
   .philosophy-grid{ grid-template-columns: 1fr; }
   .contact-direct{ grid-template-columns: 1fr; }

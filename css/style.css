@@ -297,8 +297,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   transform: translateX(-50%);
 }
 .orbit-ring.gold::after{ background: var(--gold); box-shadow: 0 0 12px 3px var(--gold); }
+.orbit-ring.purple::after{ background: var(--purple); box-shadow: 0 0 12px 3px var(--purple); width:9px; height:9px; }
+.orbit-ring.green::after{ background: var(--green); box-shadow: 0 0 10px 2px var(--green); width:5px; height:5px; }
+.orbit-ring.magenta::after{ background: var(--magenta); box-shadow: 0 0 12px 3px var(--magenta); width:6px; height:6px; }
+.orbit-ring.white::after{ background:#fff; box-shadow: 0 0 10px 2px rgba(255,255,255,.8); width:5px; height:5px; }
 .orbit-ring.spin{ animation: spin-slow 34s linear infinite; }
 .orbit-ring.spin-rev{ animation: spin-slow-rev 46s linear infinite; }
+.orbit-ring.spin-slow3{ animation: spin-slow 58s linear infinite; }
+.orbit-ring.spin-slow4{ animation: spin-slow 84s linear infinite; }
+.orbit-ring.spin-rev-slow{ animation: spin-slow-rev 68s linear infinite; }
 @keyframes spin-slow{ to{ transform: rotate(360deg); } }
 @keyframes spin-slow-rev{ to{ transform: rotate(-360deg); } }
 
@@ -885,7 +892,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @keyframes pulseDot{ 0%,100%{ opacity:1; transform:scale(1); } 50%{ opacity:.55; transform:scale(1.35); } }
 
 .hero-visual{ position:relative; height: 460px; display:flex; align-items:center; justify-content:center; }
-.hero-orbit-wrap{ position:relative; z-index:3; width: 380px; height: 380px; display:flex; align-items:center; justify-content:center; transition: transform .1s linear; }
+.hero-orbit-wrap{ position:relative; z-index:3; width: 360px; height: 360px; display:flex; align-items:center; justify-content:center; transition: transform .1s linear; }
 .hero-cursor-glow{
   position:absolute; top:0; left:0; z-index:1;
   width: 260px; height: 260px;
@@ -895,7 +902,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   will-change: transform;
 }
 .orbit-label{ transition: transform .1s linear; }
-.orbit-ring.spin-slow3{ animation: spin-slow 68s linear infinite; border-color: rgba(255,255,255,.06); }
 
 /* ---- hexagon logo frame, matching the Orbit Pixel mark ---- */
 .hero-hex-frame{

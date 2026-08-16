@@ -15,33 +15,24 @@
   .hero{ padding-top: 7.5rem; min-height:auto; padding-bottom: var(--space-5); }
   .hero-orbit-wrap{ width:280px; height:280px; }
   .hero-orbit-wrap img{ width:140px; height:140px; }
-  .interface-lines{ display:none; }
-  .float-card{ font-size:.72rem; padding:.55rem .8rem; }
-  .float-card.fc1{ left:2%; }
-  .float-card.fc2{ right:0; }
-  .float-card.fc3{ left:0; }
-  .float-card.fc4{ right:2%; }
-  .float-card.fc5{ display:none; }
-  .float-card-rich{ max-width:150px; }
-  .fc-icon{ width:28px; height:28px; }
-  .fc-icon svg{ width:14px; height:14px; }
-  .fc-text strong{ font-size:.74rem; }
-  .fc-text em{ font-size:.62rem; }
+  .orbit-label{ display:none; }
+  .hero-eyebrow-plain{ text-align:center; width:100%; }
+  .hero-eyebrow-plain::before,
+  .hero-eyebrow-plain::after{ content:'—'; margin:0 .5em; opacity:.6; }
+  .hero-feature-cards{ grid-template-columns: repeat(3,1fr); margin-top: var(--space-5); }
 
   .hero-route{ margin-top: var(--space-5); }
 
   .stats-grid{ grid-template-columns: repeat(2,1fr); }
   .services-grid{ grid-template-columns: repeat(2,1fr); }
-  .services-grid-compact{ grid-template-columns: repeat(2,1fr); }
   .service-feature{ grid-template-columns: 1fr; }
   .service-feature-visual{ order:-1; }
   .why-grid{ grid-template-columns: repeat(2,1fr); }
   .portfolio-grid{ grid-template-columns: 1fr; }
   .portfolio-stats{ gap:.5rem; }
   .portfolio-stat-pill{ padding:.55rem .9rem; }
-  .work-grid{ grid-template-columns: 1fr; }
-  .work-featured{ flex-direction: column; }
-  .work-featured .work-info{ padding: var(--space-4); }
+  .work-category-nav{ display:none; }
+  .hscroll-card{ width:260px; }
   .philosophy-grid{ grid-template-columns: 1fr; }
   .pricing-grid{ grid-template-columns: 1fr; max-width:480px; margin-inline:auto; }
   .price-card.featured{ transform:none; }
@@ -71,17 +62,19 @@
   .brand-name{ font-size:.9rem; }
   .brand-name span{ font-size:.55rem; }
 
-  .hero{ padding-top: 6.5rem; }
+  .hero{ padding-top: 6.5rem; text-align:center; }
   .hero h1{ font-size: clamp(2rem, 9vw, 2.6rem); }
+  .hero-h1-stack{ align-items:center; }
+  .hero .lead{ margin-inline:auto; }
   .hero-ctas{ flex-direction:column; align-items:stretch; }
   .hero-ctas .btn{ justify-content:center; }
+  .hero-availability{ justify-content:center; width:100%; }
   .hero-visual{ height:280px; }
   .hero-orbit-wrap{ width:220px; height:220px; }
   .hero-orbit-wrap img{ width:108px; height:108px; }
-  .float-card{ display:none; }
-  .float-card.fc1, .float-card.fc4{ display:flex; position:static; margin: .4rem auto 0; }
   .hero-visual{ flex-direction:column; gap:.6rem; }
-  .float-card-rich{ max-width:none; width:100%; justify-content:center; }
+  .hero-feature-cards{ grid-template-columns:1fr; }
+  .hero-feature-card{ text-align:left; }
 
   /* simplified service-area route on mobile: horizontal scroll, no draw animation */
   .hero-route{ margin-top: var(--space-4); }
@@ -101,8 +94,7 @@
   .stat-num{ font-size:1.7rem; }
 
   .services-grid{ grid-template-columns: 1fr; }
-  .services-grid-compact{ grid-template-columns: 1fr 1fr; gap:.7rem; }
-  .service-card-compact{ min-height:170px; padding:1rem; }
+  .service-card-compact{ min-height:170px; padding:1rem; flex-basis:190px; }
   .service-ai-strip{ flex-direction:column; align-items:flex-start; }
   .why-grid{ grid-template-columns: 1fr; }
   .philosophy-grid{ grid-template-columns: 1fr; }
@@ -142,12 +134,11 @@
   .portfolio-count{ padding:.4rem .65rem; }
   .portfolio-count span{ font-size:.9rem; }
 
-  /* work (real projects): plain vertical stack on mobile, no hover-dependent info */
-  .work-grid{ grid-template-columns: 1fr; gap: var(--space-3); }
-  .work-featured{ flex-direction:column; min-height:auto; }
-  .work-media{ min-height: 200px; }
-  .work-card:hover{ transform:none; }
-  .work-card:hover .work-img{ transform:none; }
+  /* work (real projects) on mobile: no hover-lift, mono visuals sized down */
+  .hscroll-card:hover{ transform:none; }
+  .hscroll-card:hover .hscroll-media img{ transform:none; }
+  .hscroll-card:hover .work-mono-photo{ transform:none; }
+  .hscroll-media{ height:170px; }
 
   .mobile-menu-links a{ font-size:1.7rem; }
 

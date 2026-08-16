@@ -70,27 +70,35 @@
 
     var tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
     var navbar = document.querySelector('.navbar');
-    var badge = hero.querySelector('.hero-badge');
+    var badge = hero.querySelector('.hero-eyebrow-plain') || hero.querySelector('.hero-badge');
+    var headLines = hero.querySelectorAll('.hero-h1-stack .h-line');
     var heading = hero.querySelector('h1');
     var lead = hero.querySelector('.lead');
     var ctas = hero.querySelector('.hero-ctas');
+    var avail = hero.querySelector('.hero-availability');
     var trust = hero.querySelector('.hero-trust');
     var visual = hero.querySelector('.hero-visual');
 
     if (navbar) tl.from(navbar, { opacity: 0, y: -16, duration: .7 }, 0);
     if (badge) tl.from(badge, { opacity: 0, y: 18, duration: .6 }, .15);
 
-    if (heading) {
+    if (headLines.length) {
+      tl.from(headLines, { y: '110%', opacity: 0, duration: .8, stagger: .09, ease: 'power4.out' }, .3);
+    } else if (heading) {
       var chars = splitWords(heading);
       tl.to(chars, { y: 0, duration: .8, stagger: .045, ease: 'power4.out' }, .3);
     }
     if (lead) tl.from(lead, { opacity: 0, y: 16, duration: .7 }, .75);
     if (ctas) tl.from(ctas.children, { opacity: 0, y: 14, scale: .96, duration: .55, stagger: .1 }, .9);
-    if (trust) tl.from(trust, { opacity: 0, y: 10, duration: .6 }, 1.05);
+    if (avail) tl.from(avail, { opacity: 0, y: 10, duration: .6 }, 1.05);
+    else if (trust) tl.from(trust, { opacity: 0, y: 10, duration: .6 }, 1.05);
     if (visual) tl.from(visual, { opacity: 0, y: 40, duration: 1, ease: 'power3.out' }, .5);
 
-    var floatCards = hero.querySelectorAll('.float-card');
-    if (floatCards.length) tl.from(floatCards, { opacity: 0, y: 20, scale: .85, stagger: .08, duration: .6 }, 1.1);
+    var orbitLabels = hero.querySelectorAll('.orbit-label');
+    if (orbitLabels.length) tl.from(orbitLabels, { opacity: 0, scale: .7, stagger: .12, duration: .5, ease: 'back.out(2)' }, 1.15);
+
+    var featureCards = hero.querySelectorAll('.hero-feature-card');
+    if (featureCards.length) tl.from(featureCards, { opacity: 0, y: 26, stagger: .1, duration: .65 }, 1.3);
 
     /* connecting lines behind the floating cards draw in after the cards land */
     var lines = hero.querySelectorAll('.interface-lines .ln');

@@ -82,7 +82,7 @@
     if (!hero) return;
 
     var mql = window.matchMedia('(hover: hover) and (pointer: fine)');
-    var cards = hero.querySelectorAll('.float-card');
+    var cards = hero.querySelectorAll('.orbit-label');
     var orbitWrap = hero.querySelector('.hero-orbit-wrap');
     var glow = null;
     var raf = null;

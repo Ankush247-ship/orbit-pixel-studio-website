@@ -25,6 +25,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://orbitpixelstudio.in/blog.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://orbitpixelstudio.in/portfolio/mj-art-studio.html</loc>
     <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>

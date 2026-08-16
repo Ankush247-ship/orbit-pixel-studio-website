@@ -30,6 +30,7 @@
   .service-feature-visual{ order:-1; }
   .why-grid{ grid-template-columns: repeat(2,1fr); }
   .portfolio-grid{ grid-template-columns: 1fr; }
+  .blog-grid{ grid-template-columns: repeat(2,1fr); }
   .portfolio-stats{ gap:.5rem; }
   .portfolio-stat-pill{ padding:.55rem .9rem; }
   .work-category-nav{ display:none; }
@@ -101,6 +102,7 @@
   .service-card-compact{ min-height:170px; padding:1rem; flex-basis:190px; }
   .service-ai-strip{ flex-direction:column; align-items:flex-start; }
   .why-grid{ grid-template-columns: 1fr; }
+  .blog-grid{ grid-template-columns: 1fr; }
   .philosophy-grid{ grid-template-columns: 1fr; }
   .contact-direct{ grid-template-columns: 1fr; }
 

@@ -907,12 +907,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .hero-hex-frame{
   --hex: polygon(25% 4%, 75% 4%, 100% 50%, 75% 96%, 25% 96%, 0% 50%);
   width: 206px; height: 206px;
-  clip-path: var(--hex);
-  background: linear-gradient(135deg, var(--gold) 0%, var(--bronze) 22%, var(--purple) 55%, var(--blue) 78%, var(--gold) 100%);
-  padding: 4px;
   position:relative; z-index:3;
   display:flex; align-items:center; justify-content:center;
-  filter: drop-shadow(0 0 50px rgba(231,178,79,.35));
+  filter: drop-shadow(0 8px 28px rgba(0,0,0,.5));
 }
 .hero-hex-frame img{
   width:100%; height:100%; object-fit:contain;
@@ -1146,3 +1143,101 @@ hr.hair{ border:none; border-top:1px solid var(--hairline); margin-block: var(--
 .back-link{ display:inline-flex; align-items:center; gap:.4rem; color:var(--mute); font-family:var(--font-mono); font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; }
 .back-link:hover{ color:var(--ink); }
 .back-link svg{ width:14px; height:14px; }
+
+/* ============================================================
+   LOGO-STYLE GOLD BORDERS
+   Every card across the site now carries the same metallic
+   gold → bronze border used on the hexagon logo mark, instead
+   of the plain translucent hairline. Base state = soft gold
+   hairline; hover/focus = full metallic gold sweep.
+   ============================================================ */
+:root{
+  --logo-border: linear-gradient(135deg, #FCE7B4 0%, var(--gold) 22%, var(--bronze) 50%, var(--gold) 78%, #FCE7B4 100%);
+  --logo-border-glow: 0 0 0 1px rgba(231,178,79,.18), 0 20px 45px -25px rgba(231,178,79,.35);
+}
+
+.card,
+.glass.card,
+.service-card,
+.service-card-compact,
+.portfolio-card,
+.price-card,
+.hscroll-card,
+.why-card,
+.direct-card,
+.hero-feature-card,
+.blog-card,
+.faq-item,
+.testimonial-card{
+  border-color: var(--gold-soft);
+}
+
+.card::before{ background: var(--logo-border); }
+
+.portfolio-card,
+.hscroll-card{ transition: border-color .4s var(--ease), transform .4s var(--ease), box-shadow .4s var(--ease); }
+
+.portfolio-card:hover,
+.hscroll-card:hover,
+.hero-feature-card:hover,
+.why-card:hover,
+.direct-card:hover,
+.blog-card:hover,
+.service-card-compact:hover{
+  border-color: var(--gold);
+  box-shadow: var(--logo-border-glow);
+}
+
+.hscroll-card.is-placeholder{ border-color: var(--hairline-2); }
+.hscroll-card.is-placeholder:hover{ border-color: var(--hairline-2); box-shadow:none; }
+
+.price-card.featured{
+  border: 1px solid transparent;
+  background: linear-gradient(var(--panel), var(--panel)) padding-box, var(--logo-border) border-box;
+}
+
+.service-card::after{ background: var(--gold); }
+.hero-feature-card::before{ background: var(--gold); opacity:.85; }
+.why-icon,
+.direct-icon{ border-color: var(--gold-soft); background: linear-gradient(135deg, rgba(231,178,79,.14), rgba(184,134,47,.10)); }
+.service-icon{ border-color: var(--gold-soft); }
+.service-card:hover .service-icon{ background: rgba(231,178,79,.12); }
+.service-card:hover .service-arrow{ background: var(--logo-border); }
+.price-badge{ background: linear-gradient(100deg, rgba(231,178,79,.16), rgba(184,134,47,.16)); border-color: var(--gold-soft); color: var(--gold); }
+
+/* ============ BLOG ============ */
+.blog-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap: var(--space-3); }
+.blog-card{
+  position:relative; border-radius: var(--r-lg); overflow:hidden;
+  border:1px solid var(--gold-soft); background: var(--panel);
+  display:flex; flex-direction:column; text-decoration:none; color:inherit;
+  transition: transform .4s var(--ease), border-color .4s var(--ease), box-shadow .4s var(--ease);
+}
+.blog-card:hover{ transform: translateY(-6px); }
+.blog-media{ position:relative; height:180px; overflow:hidden; background: var(--deep); }
+.blog-media img{ width:100%; height:100%; object-fit:cover; display:block; transition: transform .8s var(--ease); }
+.blog-card:hover .blog-media img{ transform:scale(1.06); }
+.blog-tag{
+  position:absolute; top:var(--space-2); left:var(--space-2); z-index:2;
+  font-family: var(--font-mono); font-size:.66rem; letter-spacing:.08em; text-transform:uppercase;
+  padding:.35rem .7rem; border-radius: var(--r-pill);
+  background: rgba(5,5,5,.65); border:1px solid var(--gold-soft); color: var(--gold);
+  backdrop-filter: blur(6px);
+}
+.blog-info{ padding: var(--space-4); display:flex; flex-direction:column; gap:.6rem; flex:1; }
+.blog-meta{ display:flex; align-items:center; gap:.6rem; font-family: var(--font-mono); font-size:.7rem; color: var(--mute-2); text-transform:uppercase; letter-spacing:.04em; }
+.blog-info h3{ font-size:1.08rem; line-height:1.35; }
+.blog-info p{ color: var(--mute); font-size:.88rem; flex:1; }
+.blog-readmore{ display:inline-flex; align-items:center; gap:.4rem; font-family: var(--font-mono); font-size:.76rem; text-transform:uppercase; letter-spacing:.05em; color: var(--gold); }
+.blog-readmore svg{ width:14px; height:14px; transition: transform .3s var(--ease); }
+.blog-card:hover .blog-readmore svg{ transform: translate(3px,-3px); }
+
+.blog-article{ padding: var(--space-4); }
+.blog-article + .blog-article{ margin-top: var(--space-4); border-top:1px solid var(--hairline); padding-top: var(--space-5); }
+.blog-article h2{ font-size:1.6rem; margin-bottom:.6rem; scroll-margin-top: 100px; }
+.blog-article .blog-meta{ margin-bottom: var(--space-3); }
+.blog-article p{ color: var(--mute); font-size:.98rem; line-height:1.75; margin-bottom: var(--space-3); max-width: 68ch; }
+.blog-article ul{ color: var(--mute); font-size:.96rem; line-height:1.8; margin: 0 0 var(--space-3) 1.2rem; max-width: 66ch; }
+.blog-article ul li::marker{ color: var(--gold); }
+.blog-article .back-to-top{ display:inline-flex; align-items:center; gap:.4rem; font-family: var(--font-mono); font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; color: var(--mute); margin-top:.5rem; }
+.blog-article .back-to-top:hover{ color: var(--gold); }

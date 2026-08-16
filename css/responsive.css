@@ -57,23 +57,27 @@
   .wrap{ padding-inline: 1.15rem; }
   .section{ padding-block: var(--space-5); }
 
-  .navbar{ padding: 1rem 0; }
-  .brand img{ height:34px; width:34px; }
-  .brand-name{ font-size:.9rem; }
-  .brand-name span{ font-size:.55rem; }
+  .navbar{ padding: .8rem 0; }
+  .brand img{ height:32px; width:32px; }
+  .brand-name{ font-size:.88rem; }
+  .brand-name span{ font-size:.53rem; }
+  .hamburger{ width:44px; height:44px; }
 
-  .hero{ padding-top: 6.5rem; text-align:center; }
-  .hero h1{ font-size: clamp(2rem, 9vw, 2.6rem); }
-  .hero-h1-stack{ align-items:center; }
-  .hero .lead{ margin-inline:auto; }
-  .hero-ctas{ flex-direction:column; align-items:stretch; }
+  .hero{ padding-top: 4.6rem; text-align:center; }
+  .hero-grid{ row-gap: 1.1rem; }
+  .hero h1{ font-size: clamp(2.625rem, 12vw, 3.625rem); line-height: 1; }
+  .hero-h1-stack{ align-items:center; gap:0; }
+  .hero-eyebrow-plain{ margin-top: 1.6rem; margin-bottom: .9rem; }
+  .hero .lead{ margin-inline:auto; max-width: 340px; font-size:1.05rem; line-height:1.55; margin-top: 1rem; }
+  .hero-ctas{ flex-direction:column; align-items:stretch; margin-top: 1.4rem; }
   .hero-ctas .btn{ justify-content:center; }
-  .hero-availability{ justify-content:center; width:100%; }
-  .hero-visual{ height:280px; }
-  .hero-orbit-wrap{ width:220px; height:220px; }
-  .hero-orbit-wrap img{ width:108px; height:108px; }
+  .hero-availability{ justify-content:center; width:100%; margin-top: 1.1rem; }
+  .hero-visual{ height:360px; }
+  .hero-orbit-wrap{ width:260px; height:260px; }
+  .hero-hex-frame{ width:232px; height:232px; }
   .hero-visual{ flex-direction:column; gap:.6rem; }
-  .hero-feature-cards{ grid-template-columns:1fr; }
+  .hero-hex-tagline{ min-width:260px; max-width:310px; padding-block:.6rem; margin-top: .7rem; }
+  .hero-feature-cards{ grid-template-columns:1fr; margin-top: 2.2rem; }
   .hero-feature-card{ text-align:left; }
 
   /* simplified service-area route on mobile: horizontal scroll, no draw animation */
@@ -147,6 +151,11 @@
 
 @media (max-width: 400px){
   .stats-grid{ grid-template-columns: 1fr 1fr; }
+  .hero{ padding-top: 4.2rem; }
+  .hero-visual{ height:310px; }
+  .hero-orbit-wrap{ width:220px; height:220px; }
+  .hero-hex-frame{ width:196px; height:196px; }
+  .hero h1{ font-size: clamp(2.4rem, 12.5vw, 2.9rem); }
 }
 
 @media (max-width: 1024px){

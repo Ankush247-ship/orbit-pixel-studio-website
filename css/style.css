@@ -850,7 +850,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   padding-top: 6rem;
   overflow:hidden;
 }
-.hero-grid{ display:grid; grid-template-columns: 1.05fr .95fr; gap: var(--space-5); align-items:center; }
+.hero-grid{ display:grid; grid-template-columns: 1.05fr .95fr; column-gap: var(--space-5); row-gap: 1.25rem; align-items:center; }
 .hero-body{ width:100%; }
 .hero-eyebrow-plain{
   display:inline-block; margin-bottom: var(--space-3);

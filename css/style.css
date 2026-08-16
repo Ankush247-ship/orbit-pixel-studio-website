@@ -20,20 +20,20 @@
   --mute:        #A5A5B5;
   --mute-2:      #71717F;
 
-  /* ---- brand spectrum (sampled from the Orbit Pixel mark) ---- */
-  --blue:        #3E63FF;
-  --purple:      #8B5CF6;
-  --magenta:     #EC4899;
-  --orange:      #FB923C;
+  /* ---- brand spectrum (sampled directly from the Orbit Pixel logo) ---- */
+  --blue:        #2E42E8;
+  --purple:      #8B2FF0;
+  --magenta:     #EA1FDE;
+  --orange:      #FF7A00;
   --green:       #22C55E;
   --red:         #EF4444;
-  --cyan:        #22D3EE;
-  --gold:        #E7B24F;
-  --gold-soft:   rgba(231,178,79,.35);
-  --bronze:      #B8862F;
+  --cyan:        #00AEEF;
+  --gold:        #F0B400;
+  --gold-soft:   rgba(240,180,0,.35);
+  --bronze:      #C98A1A;
 
   --spectrum: linear-gradient(100deg, var(--blue) 0%, var(--purple) 35%, var(--magenta) 65%, var(--orange) 100%);
-  --spectrum-soft: linear-gradient(100deg, rgba(62,99,255,.16), rgba(139,92,246,.16), rgba(236,72,153,.16), rgba(251,146,60,.16));
+  --spectrum-soft: linear-gradient(100deg, rgba(46,66,232,.16), rgba(139,47,240,.16), rgba(234,31,222,.16), rgba(255,122,0,.16));
 
   /* ---- type ---- */
   --font-display: 'Space Grotesk', sans-serif;
@@ -580,9 +580,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   border-radius: var(--r-pill);
   background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.015));
   backdrop-filter: blur(8px);
-  transition: border-color .4s var(--ease), transform .4s var(--ease);
+  transition: border-color .4s var(--ease), transform .4s var(--ease), background .4s var(--ease);
+  text-decoration:none; color: inherit; cursor:pointer;
 }
-.portfolio-stat-pill:hover{ border-color: var(--hairline-2); transform: translateY(-3px); }
+.portfolio-stat-pill:hover{ border-color: var(--purple); transform: translateY(-3px); background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); }
 .portfolio-stat-pill.total{
   border-color: rgba(139,92,246,.4);
   background: linear-gradient(100deg, rgba(62,99,255,.12), rgba(236,72,153,.12));

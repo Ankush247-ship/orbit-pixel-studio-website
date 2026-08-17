@@ -144,318 +144,161 @@
     </div>
     <span class="eyebrow">Our Services</span>
     <h1>Build. Brand. Grow. Automate. Maintain.</h1>
-    <p class="lead">One studio, five interconnected capabilities — everything your business needs to build, market, scale and support its digital presence.</p>
+    <p class="lead">One studio, five interconnected capabilities — explore each service below for full details and pricing.</p>
   </div>
 </section>
 
+<script>
+// Redirect old in-page service anchors (services/seo.html etc.) to their
+// dedicated pages, in case any were bookmarked or shared externally.
+(function () {
+  var redirects = {
+    'web-dev': 'services/website-development.html',
+    'design': 'services/graphic-design.html',
+    'seo': 'services/seo.html',
+    'smm': 'services/social-media-marketing.html',
+    'leads': 'services/lead-generation.html',
+    'ads': 'services/meta-google-ads.html',
+    'video-edit': 'services/video-editing.html',
+    'video-shoot': 'services/video-shoot.html',
+    'ai-content': 'services/ai-automation.html',
+    'maintenance': 'services/website-maintenance.html'
+  };
+  var hash = location.hash.replace('#', '');
+  if (redirects[hash]) {
+    location.replace(redirects[hash]);
+  }
+})();
+</script>
+
 <h2 class="sr-only">Our Services</h2>
 
-<!-- ============ CATEGORY: BUILD ============ -->
+<!-- ============ CATEGORY: 01 / Build ============ -->
 <section class="section-tight">
   <div class="wrap">
     <div class="service-category-head" data-reveal>
       <span class="eyebrow">01 / Build</span>
       <h3 class="h-card" style="font-size:1.4rem;margin-top:.3rem;">Websites &amp; digital experiences</h3>
     </div>
-  </div>
-</section>
-
-<!-- ============ SERVICE — WEB DEV ============ -->
-<section class="section-tight" id="web-dev">
-  <div class="wrap">
-    <div class="glass card service-detail-card" data-reveal style="padding:var(--space-5);">
-      <div class="service-icon" style="width:64px;height:64px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" style="width:28px;height:28px;"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-      <div>
-        <span class="service-num">01</span>
-        <h3 class="h-card" style="margin-top:.3rem;">Website Development</h3>
-        <p class="service-desc" style="margin:.6rem 0;">Modern, responsive and high-converting websites — from landing pages to full custom builds and e-commerce.</p>
-        <div class="mission-tags">
-          <span class="mission-tag">Custom design</span>
-          <span class="mission-tag">Landing pages</span>
-          <span class="mission-tag">E-commerce</span>
-          <span class="mission-tag">Mobile responsive</span>
-          <span class="mission-tag">SEO-ready</span>
-        </div>
-      </div>
-      <div style="text-align:right;">
-        <div class="service-price-label">Starting Price</div>
-        <div class="service-price" style="font-size:1.6rem;">₹9,999<small style="font-weight:400;color:var(--mute-2);font-size:.9rem;"> /website</small></div>
-        <a href="contact.html?service=Website+Development" class="btn btn-primary btn-sm" style="margin-top:1rem;">Get This Service →</a>
-        <div><a href="portfolio.html#cat-website" class="service-feature-link" style="margin-top:.6rem;display:inline-flex;">View Website Projects →</a></div>
-      </div>
+    <div class="services-hub-grid" data-reveal-group>
+      <a href="services/website-development.html" class="glass card service-hub-card" data-reveal-item>
+        <div class="service-icon" style="width:52px;height:52px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" style="width:28px;height:28px;"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h4 class="h-card" style="font-size:1.15rem;margin-top:.8rem;">Website Development</h4>
+        <p class="service-desc" style="margin:.5rem 0;font-size:.92rem;">Modern, responsive and high-converting websites — from landing pages to full custom builds and e-commerce.</p>
+        <span class="service-price" style="font-size:1rem;">₹9,999 /website</span>
+        <span class="service-feature-link" style="margin-top:.6rem;">View Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ============ CATEGORY: BRAND ============ -->
+<!-- ============ CATEGORY: 02 / Brand ============ -->
 <section class="section-tight">
   <div class="wrap">
     <div class="service-category-head" data-reveal>
       <span class="eyebrow">02 / Brand</span>
       <h3 class="h-card" style="font-size:1.4rem;margin-top:.3rem;">Identity &amp; creative design</h3>
     </div>
-  </div>
-</section>
-
-<!-- ============ SERVICE — DESIGN ============ -->
-<section class="section-tight" id="design">
-  <div class="wrap">
-    <div class="glass card service-detail-card" data-reveal style="padding:var(--space-5);">
-      <div class="service-icon" style="width:64px;height:64px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--magenta)" stroke-width="2" style="width:28px;height:28px;"><path d="M12 19l7-7 3 3-7 7-3-3zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg></div>
-      <div>
-        <span class="service-num">02</span>
-        <h3 class="h-card" style="margin-top:.3rem;">Branding &amp; Graphic Design</h3>
-        <p class="service-desc" style="margin:.6rem 0;">Logo design, brand identity and creative design for your marketing and packaging.</p>
-        <div class="mission-tags">
-          <span class="mission-tag">Logo design</span>
-          <span class="mission-tag">Brand identity</span>
-          <span class="mission-tag">Social creatives</span>
-          <span class="mission-tag">Print &amp; packaging</span>
-          <span class="mission-tag">Brand guidelines</span>
-        </div>
-      </div>
-      <div style="text-align:right;">
-        <div class="service-price-label">Starting Price</div>
-        <div class="service-price" style="font-size:1.6rem;">₹499<small style="font-weight:400;color:var(--mute-2);font-size:.9rem;"> /design</small></div>
-        <a href="contact.html?service=Graphic+Design" class="btn btn-primary btn-sm" style="margin-top:1rem;">Get This Service →</a>
-        <div><a href="portfolio.html#cat-branding" class="service-feature-link" style="margin-top:.6rem;display:inline-flex;">View Branding Projects →</a></div>
-      </div>
+    <div class="services-hub-grid" data-reveal-group>
+      <a href="services/graphic-design.html" class="glass card service-hub-card" data-reveal-item>
+        <div class="service-icon" style="width:52px;height:52px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--magenta)" stroke-width="2" style="width:28px;height:28px;"><path d="M12 19l7-7 3 3-7 7-3-3zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg></div>
+        <h4 class="h-card" style="font-size:1.15rem;margin-top:.8rem;">Branding & Graphic Design</h4>
+        <p class="service-desc" style="margin:.5rem 0;font-size:.92rem;">Logo design, brand identity and creative design for your marketing and packaging.</p>
+        <span class="service-price" style="font-size:1rem;">₹499 /design</span>
+        <span class="service-feature-link" style="margin-top:.6rem;">View Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ============ CATEGORY: GROW ============ -->
+<!-- ============ CATEGORY: 03 / Grow ============ -->
 <section class="section-tight">
   <div class="wrap">
     <div class="service-category-head" data-reveal>
       <span class="eyebrow">03 / Grow</span>
       <h3 class="h-card" style="font-size:1.4rem;margin-top:.3rem;">SEO, social &amp; digital marketing</h3>
     </div>
-  </div>
-</section>
-
-<!-- ============ SERVICE — SEO ============ -->
-<section class="section-tight" id="seo">
-  <div class="wrap">
-    <div class="glass card service-detail-card" data-reveal style="padding:var(--space-5);">
-      <div class="service-icon" style="width:64px;height:64px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" style="width:28px;height:28px;"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
-      <div>
-        <span class="service-num">03</span>
-        <h3 class="h-card" style="margin-top:.3rem;">SEO &amp; Local SEO</h3>
-        <p class="service-desc" style="margin:.6rem 0;">Improve your website ranking on Google, strengthen your Google Business Profile and get more organic traffic.</p>
-        <div class="mission-tags">
-          <span class="mission-tag">Keyword strategy</span>
-          <span class="mission-tag">On-page SEO</span>
-          <span class="mission-tag">Local &amp; GBP optimization</span>
-          <span class="mission-tag">Technical audits</span>
-          <span class="mission-tag">Monthly reporting</span>
-        </div>
-      </div>
-      <div style="text-align:right;">
-        <div class="service-price-label">Starting Price</div>
-        <div class="service-price" style="font-size:1.6rem;">₹6,999<small style="font-weight:400;color:var(--mute-2);font-size:.9rem;"> /month</small></div>
-        <a href="contact.html?service=SEO" class="btn btn-primary btn-sm" style="margin-top:1rem;">Get This Service →</a>
-        <div><a href="portfolio.html#cat-seo" class="service-feature-link" style="margin-top:.6rem;display:inline-flex;">View Growth Projects →</a></div>
-      </div>
+    <div class="services-hub-grid" data-reveal-group>
+      <a href="services/seo.html" class="glass card service-hub-card" data-reveal-item>
+        <div class="service-icon" style="width:52px;height:52px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" style="width:28px;height:28px;"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+        <h4 class="h-card" style="font-size:1.15rem;margin-top:.8rem;">SEO & Local SEO</h4>
+        <p class="service-desc" style="margin:.5rem 0;font-size:.92rem;">Improve your website ranking on Google, strengthen your Google Business Profile and get more organic traffic.</p>
+        <span class="service-price" style="font-size:1rem;">₹6,999 /month</span>
+        <span class="service-feature-link" style="margin-top:.6rem;">View Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
+      </a>
+      <a href="services/social-media-marketing.html" class="glass card service-hub-card" data-reveal-item>
+        <div class="service-icon" style="width:52px;height:52px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--magenta)" stroke-width="2" style="width:28px;height:28px;"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.5l6.8-3.8M8.6 13.5l6.8 3.8"/></svg></div>
+        <h4 class="h-card" style="font-size:1.15rem;margin-top:.8rem;">Social Media Marketing</h4>
+        <p class="service-desc" style="margin:.5rem 0;font-size:.92rem;">Promote your brand, engage your audience and grow your business on social media.</p>
+        <span class="service-price" style="font-size:1rem;">₹4,999 /month</span>
+        <span class="service-feature-link" style="margin-top:.6rem;">View Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
+      </a>
+      <a href="services/lead-generation.html" class="glass card service-hub-card" data-reveal-item>
+        <div class="service-icon" style="width:52px;height:52px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" style="width:28px;height:28px;"><path d="M4 4h16l-6 8v6l-4 2v-8L4 4z"/></svg></div>
+        <h4 class="h-card" style="font-size:1.15rem;margin-top:.8rem;">Lead Generation</h4>
+        <p class="service-desc" style="margin:.5rem 0;font-size:.92rem;">Get quality leads for your business through smart campaigns and funnels.</p>
+        <span class="service-price" style="font-size:1rem;">₹7,499 /month</span>
+        <span class="service-feature-link" style="margin-top:.6rem;">View Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
+      </a>
+      <a href="services/meta-google-ads.html" class="glass card service-hub-card" data-reveal-item>
+        <div class="service-icon" style="width:52px;height:52px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2" style="width:28px;height:28px;"><path d="M3 11l18-7-7 18-2-8-9-3z"/></svg></div>
+        <h4 class="h-card" style="font-size:1.15rem;margin-top:.8rem;">Meta & Google Ads</h4>
+        <p class="service-desc" style="margin:.5rem 0;font-size:.92rem;">Run targeted ad campaigns on Meta & Google to generate leads and sales.</p>
+        <span class="service-price" style="font-size:1rem;">₹4,999 /month</span>
+        <span class="service-feature-link" style="margin-top:.6rem;">View Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
+      </a>
+      <a href="services/video-editing.html" class="glass card service-hub-card" data-reveal-item>
+        <div class="service-icon" style="width:52px;height:52px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" style="width:28px;height:28px;"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="M17 10l5-3v10l-5-3"/></svg></div>
+        <h4 class="h-card" style="font-size:1.15rem;margin-top:.8rem;">Video Editing</h4>
+        <p class="service-desc" style="margin:.5rem 0;font-size:.92rem;">Professional video editing to make your content engaging and impactful.</p>
+        <span class="service-price" style="font-size:1rem;">₹799 /video</span>
+        <span class="service-feature-link" style="margin-top:.6rem;">View Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
+      </a>
+      <a href="services/video-shoot.html" class="glass card service-hub-card" data-reveal-item>
+        <div class="service-icon" style="width:52px;height:52px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" style="width:28px;height:28px;"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+        <h4 class="h-card" style="font-size:1.15rem;margin-top:.8rem;">Video Shoot</h4>
+        <p class="service-desc" style="margin:.5rem 0;font-size:.92rem;">High-quality video shoots for your brand, products or services.</p>
+        <span class="service-price" style="font-size:1rem;">₹1,899 /session</span>
+        <span class="service-feature-link" style="margin-top:.6rem;">View Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ============ SERVICE — SMM ============ -->
-<section class="section-tight" id="smm">
-  <div class="wrap">
-    <div class="glass card service-detail-card" data-reveal style="padding:var(--space-5);">
-      <div class="service-icon" style="width:64px;height:64px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--magenta)" stroke-width="2" style="width:28px;height:28px;"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.5l6.8-3.8M8.6 13.5l6.8 3.8"/></svg></div>
-      <div>
-        <span class="service-num">04</span>
-        <h3 class="h-card" style="margin-top:.3rem;">Social Media Marketing</h3>
-        <p class="service-desc" style="margin:.6rem 0;">Promote your brand, engage your audience and grow your business on social media.</p>
-        <div class="mission-tags">
-          <span class="mission-tag">Content calendar</span>
-          <span class="mission-tag">Reels &amp; posts</span>
-          <span class="mission-tag">Community engagement</span>
-          <span class="mission-tag">Growth tracking</span>
-        </div>
-      </div>
-      <div style="text-align:right;">
-        <div class="service-price-label">Starting Price</div>
-        <div class="service-price" style="font-size:1.6rem;">₹4,999<small style="font-weight:400;color:var(--mute-2);font-size:.9rem;"> /month</small></div>
-        <a href="contact.html?service=Social+Media+Marketing" class="btn btn-primary btn-sm" style="margin-top:1rem;">Get This Service →</a>
-        <div><a href="portfolio.html#cat-smm" class="service-feature-link" style="margin-top:.6rem;display:inline-flex;">View Social Projects →</a></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SERVICE — LEADS ============ -->
-<section class="section-tight" id="leads">
-  <div class="wrap">
-    <div class="glass card service-detail-card" data-reveal style="padding:var(--space-5);">
-      <div class="service-icon" style="width:64px;height:64px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" style="width:28px;height:28px;"><path d="M4 4h16l-6 8v6l-4 2v-8L4 4z"/></svg></div>
-      <div>
-        <span class="service-num">05</span>
-        <h3 class="h-card" style="margin-top:.3rem;">Lead Generation</h3>
-        <p class="service-desc" style="margin:.6rem 0;">Get quality leads for your business through smart campaigns and funnels.</p>
-        <div class="mission-tags">
-          <span class="mission-tag">Funnel design</span>
-          <span class="mission-tag">Landing pages</span>
-          <span class="mission-tag">Lead capture forms</span>
-          <span class="mission-tag">Follow-up automation</span>
-        </div>
-      </div>
-      <div style="text-align:right;">
-        <div class="service-price-label">Starting Price</div>
-        <div class="service-price" style="font-size:1.6rem;">₹7,499<small style="font-weight:400;color:var(--mute-2);font-size:.9rem;"> /month</small></div>
-        <a href="contact.html?service=Lead+Generation" class="btn btn-primary btn-sm" style="margin-top:1rem;">Get This Service →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SERVICE — ADS ============ -->
-<section class="section-tight" id="ads">
-  <div class="wrap">
-    <div class="glass card service-detail-card" data-reveal style="padding:var(--space-5);">
-      <div class="service-icon" style="width:64px;height:64px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2" style="width:28px;height:28px;"><path d="M3 11l18-7-7 18-2-8-9-3z"/></svg></div>
-      <div>
-        <span class="service-num">06</span>
-        <h3 class="h-card" style="margin-top:.3rem;">Meta &amp; Google Ads</h3>
-        <p class="service-desc" style="margin:.6rem 0;">Run targeted ad campaigns on Meta &amp; Google to generate leads and sales.</p>
-        <div class="mission-tags">
-          <span class="mission-tag">Campaign setup</span>
-          <span class="mission-tag">Audience targeting</span>
-          <span class="mission-tag">Ad creatives</span>
-          <span class="mission-tag">Performance tracking</span>
-        </div>
-      </div>
-      <div style="text-align:right;">
-        <div class="service-price-label">Management Fee</div>
-        <div class="service-price" style="font-size:1.6rem;">₹4,999<small style="font-weight:400;color:var(--mute-2);font-size:.9rem;"> /month</small></div>
-        <a href="contact.html?service=Meta+%26+Google+Ads" class="btn btn-primary btn-sm" style="margin-top:1rem;">Get This Service →</a>
-        <p class="field-note" style="margin-top:.6rem;">Ad spend billed separately.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SERVICE — VIDEO EDITING ============ -->
-<section class="section-tight" id="video-edit">
-  <div class="wrap">
-    <div class="glass card service-detail-card" data-reveal style="padding:var(--space-5);">
-      <div class="service-icon" style="width:64px;height:64px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" style="width:28px;height:28px;"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="M17 10l5-3v10l-5-3"/></svg></div>
-      <div>
-        <span class="service-num">07</span>
-        <h3 class="h-card" style="margin-top:.3rem;">Video Editing</h3>
-        <p class="service-desc" style="margin:.6rem 0;">Professional video editing to make your content engaging and impactful.</p>
-        <div class="mission-tags">
-          <span class="mission-tag">Reels &amp; shorts</span>
-          <span class="mission-tag">Colour grading</span>
-          <span class="mission-tag">Motion graphics</span>
-          <span class="mission-tag">Sound design</span>
-        </div>
-      </div>
-      <div style="text-align:right;">
-        <div class="service-price-label">Starting Price</div>
-        <div class="service-price" style="font-size:1.6rem;">₹799<small style="font-weight:400;color:var(--mute-2);font-size:.9rem;"> /video</small></div>
-        <a href="contact.html?service=Video+Editing" class="btn btn-primary btn-sm" style="margin-top:1rem;">Get This Service →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SERVICE — VIDEO SHOOT ============ -->
-<section class="section-tight" id="video-shoot">
-  <div class="wrap">
-    <div class="glass card service-detail-card" data-reveal style="padding:var(--space-5);">
-      <div class="service-icon" style="width:64px;height:64px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" style="width:28px;height:28px;"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
-      <div>
-        <span class="service-num">08</span>
-        <h3 class="h-card" style="margin-top:.3rem;">Video Shoot</h3>
-        <p class="service-desc" style="margin:.6rem 0;">High-quality video shoots for your brand, products or services.</p>
-        <div class="mission-tags">
-          <span class="mission-tag">On-location shoot</span>
-          <span class="mission-tag">Product &amp; brand videos</span>
-          <span class="mission-tag">Professional equipment</span>
-          <span class="mission-tag">Up to 2 hours</span>
-        </div>
-      </div>
-      <div style="text-align:right;">
-        <div class="service-price-label">Up to 2 Hours</div>
-        <div class="service-price" style="font-size:1.6rem;">₹1,899<small style="font-weight:400;color:var(--mute-2);font-size:.9rem;"> /session</small></div>
-        <a href="contact.html?service=Video+Shoot" class="btn btn-primary btn-sm" style="margin-top:1rem;">Get This Service →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CATEGORY: AUTOMATE ============ -->
+<!-- ============ CATEGORY: 04 / Automate ============ -->
 <section class="section-tight">
   <div class="wrap">
     <div class="service-category-head" data-reveal>
       <span class="eyebrow">04 / Automate</span>
       <h3 class="h-card" style="font-size:1.4rem;margin-top:.3rem;">AI &amp; business automation</h3>
     </div>
-  </div>
-</section>
-
-<!-- ============ SERVICE — AI AUTOMATION & CONTENT ============ -->
-<section class="section-tight" id="ai-content">
-  <div class="wrap">
-    <div class="glass card service-detail-card" data-reveal style="padding:var(--space-5);">
-      <div class="service-icon" style="width:64px;height:64px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2" style="width:28px;height:28px;"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg></div>
-      <div>
-        <span class="service-num">09</span>
-        <h3 class="h-card" style="margin-top:.3rem;">AI Automation &amp; Content</h3>
-        <p class="service-desc" style="margin:.6rem 0;">AI-powered content creation plus automated lead capture and WhatsApp follow-up, so enquiries get a response without manual work.</p>
-        <div class="mission-tags">
-          <span class="mission-tag">AI scripting</span>
-          <span class="mission-tag">Lead automation</span>
-          <span class="mission-tag">WhatsApp auto-reply</span>
-          <span class="mission-tag">Auto captions</span>
-          <span class="mission-tag">Fast turnaround</span>
-        </div>
-      </div>
-      <div style="text-align:right;">
-        <div class="service-price-label">Starting Price</div>
-        <div class="service-price" style="font-size:1.6rem;">₹999<small style="font-weight:400;color:var(--mute-2);font-size:.9rem;"> /content</small></div>
-        <a href="contact.html?service=AI+Automation" class="btn btn-primary btn-sm" style="margin-top:1rem;">Get This Service →</a>
-        <div><a href="portfolio.html#cat-ai" class="service-feature-link" style="margin-top:.6rem;display:inline-flex;">View Automation Projects →</a></div>
-      </div>
+    <div class="services-hub-grid" data-reveal-group>
+      <a href="services/ai-automation.html" class="glass card service-hub-card" data-reveal-item>
+        <div class="service-icon" style="width:52px;height:52px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2" style="width:28px;height:28px;"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg></div>
+        <h4 class="h-card" style="font-size:1.15rem;margin-top:.8rem;">AI Automation & Content</h4>
+        <p class="service-desc" style="margin:.5rem 0;font-size:.92rem;">AI-powered content creation plus automated lead capture and WhatsApp follow-up, so enquiries get a response without manual work.</p>
+        <span class="service-price" style="font-size:1rem;">₹999 /content</span>
+        <span class="service-feature-link" style="margin-top:.6rem;">View Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ============ CATEGORY: MAINTAIN ============ -->
+<!-- ============ CATEGORY: 05 / Maintain ============ -->
 <section class="section-tight">
   <div class="wrap">
     <div class="service-category-head" data-reveal>
       <span class="eyebrow">05 / Maintain</span>
       <h3 class="h-card" style="font-size:1.4rem;margin-top:.3rem;">Optimize &amp; support your digital systems</h3>
     </div>
-  </div>
-</section>
-
-<!-- ============ SERVICE — MAINTENANCE ============ -->
-<section class="section-tight" id="maintenance">
-  <div class="wrap">
-    <div class="glass card service-detail-card" data-reveal style="padding:var(--space-5);">
-      <div class="service-icon" style="width:64px;height:64px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" style="width:28px;height:28px;"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
-      <div>
-        <span class="service-num">10</span>
-        <h3 class="h-card" style="margin-top:.3rem;">Website Maintenance &amp; Support</h3>
-        <p class="service-desc" style="margin:.6rem 0;">Ongoing updates, performance optimization and technical support so your website keeps running fast and securely after launch.</p>
-        <div class="mission-tags">
-          <span class="mission-tag">Content updates</span>
-          <span class="mission-tag">Performance optimization</span>
-          <span class="mission-tag">Uptime &amp; security monitoring</span>
-          <span class="mission-tag">Technical support</span>
-        </div>
-      </div>
-      <div style="text-align:right;">
-        <div class="service-price-label">Plans From</div>
-        <div class="service-price" style="font-size:1.6rem;">Custom</div>
-        <a href="contact.html?service=Website+Maintenance" class="btn btn-primary btn-sm" style="margin-top:1rem;">Get a Quote →</a>
-      </div>
+    <div class="services-hub-grid" data-reveal-group>
+      <a href="services/website-maintenance.html" class="glass card service-hub-card" data-reveal-item>
+        <div class="service-icon" style="width:52px;height:52px;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" style="width:28px;height:28px;"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+        <h4 class="h-card" style="font-size:1.15rem;margin-top:.8rem;">Website Maintenance & Support</h4>
+        <p class="service-desc" style="margin:.5rem 0;font-size:.92rem;">Ongoing updates, performance optimization and technical support so your website keeps running fast and securely after launch.</p>
+        <span class="service-price" style="font-size:1rem;">Custom</span>
+        <span class="service-feature-link" style="margin-top:.6rem;">View Service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
+      </a>
     </div>
   </div>
 </section>
@@ -497,7 +340,7 @@
 
       <div class="glass card" data-reveal style="padding:var(--space-4);">
         <h3 class="h-card" style="font-size:1.1rem;">Do you provide website maintenance?</h3>
-        <p class="service-desc" style="margin-top:.5rem;">Yes. Maintenance plans cover content updates, performance optimization, uptime and security monitoring, and technical support after launch — see the <a href="services.html#maintenance">Maintain</a> service above or get in touch for a custom plan.</p>
+        <p class="service-desc" style="margin-top:.5rem;">Yes. Maintenance plans cover content updates, performance optimization, uptime and security monitoring, and technical support after launch — see the <a href="services/website-maintenance.html">Maintain</a> service above or get in touch for a custom plan.</p>
       </div>
 
     </div>
@@ -531,16 +374,16 @@
       <div class="footer-col">
         <h3>Services</h3>
         <ul>
-          <li><a href="services.html#seo">SEO</a></li>
-          <li><a href="services.html#smm">Social Media Marketing</a></li>
-          <li><a href="services.html#leads">Lead Generation</a></li>
-          <li><a href="services.html#design">Graphic Design</a></li>
-          <li><a href="services.html#video-edit">Video Editing</a></li>
-          <li><a href="services.html#ai-content">AI Content Creation</a></li>
-          <li><a href="services.html#web-dev">Website Development</a></li>
-          <li><a href="services.html#video-shoot">Video Shoot</a></li>
-          <li><a href="services.html#ads">Meta &amp; Google Ads</a></li>
-          <li><a href="services.html#maintenance">Website Maintenance</a></li>
+          <li><a href="services/seo.html">SEO</a></li>
+          <li><a href="services/social-media-marketing.html">Social Media Marketing</a></li>
+          <li><a href="services/lead-generation.html">Lead Generation</a></li>
+          <li><a href="services/graphic-design.html">Graphic Design</a></li>
+          <li><a href="services/video-editing.html">Video Editing</a></li>
+          <li><a href="services/ai-automation.html">AI Content Creation</a></li>
+          <li><a href="services/website-development.html">Website Development</a></li>
+          <li><a href="services/video-shoot.html">Video Shoot</a></li>
+          <li><a href="services/meta-google-ads.html">Meta &amp; Google Ads</a></li>
+          <li><a href="services/website-maintenance.html">Website Maintenance</a></li>
         </ul>
       </div>
       <div class="footer-col">

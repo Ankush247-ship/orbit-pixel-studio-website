@@ -546,6 +546,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .why-card h3{ font-size:1.05rem; margin-bottom:.5rem; }
 .why-card p{ color: var(--mute); font-size:.88rem; }
 
+/* ============ SERVICES HUB GRID ============ */
+.services-hub-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap: var(--space-3); margin-top: var(--space-3); }
+.service-hub-card{ display:flex; flex-direction:column; padding: var(--space-4); text-decoration:none; color:inherit; transition: transform .4s var(--ease), border-color .4s var(--ease); }
+.service-hub-card:hover{ transform: translateY(-4px); border-color: var(--hairline-2); }
+.service-hub-card .service-price{ font-family: var(--font-display); font-weight:600; margin-top:auto; padding-top:.6rem; }
+.service-hub-card .service-feature-link{ display:inline-flex; align-items:center; gap:.4rem; color: var(--blue); }
+.service-hub-card:hover .service-feature-link{ gap:.7rem; }
+
 /* ============ PROCESS TIMELINE ============ */
 .process-track{ position:relative; display:flex; justify-content:space-between; gap: var(--space-2); }
 .process-line{

@@ -1,20 +1,21 @@
 # Orbit Pixel Studio
 
-> Orbit Pixel Studio is a digital solutions studio based in India, offering website development, SEO, social media marketing, lead generation, graphic design, video editing, AI content creation, and paid ads management for small and growing businesses.
+> Orbit Pixel Studio is a digital solutions studio based in Ambernath, Maharashtra, India, offering website development, SEO, social media marketing, lead generation, graphic design, video editing, AI content and workflow automation, paid ads management, and website maintenance for small and growing businesses.
 
 Orbit Pixel Studio brings strategy, creativity and technology together to help businesses build a digital presence and generate customers. Founded on the principle of Create · Innovate · Grow.
 
 ## Services
 
-- [Website Development](https://orbitpixelstudio.in/services.html#web-dev): Modern, responsive, high-converting websites — starting ₹9,999/website
-- [SEO](https://orbitpixelstudio.in/services.html#seo): Keyword strategy, on-page SEO, technical audits, monthly reporting — starting ₹6,999/month
-- [Social Media Marketing](https://orbitpixelstudio.in/services.html#smm): Brand promotion and audience growth on social platforms — starting ₹4,999/month
-- [Lead Generation](https://orbitpixelstudio.in/services.html#leads): Smart campaigns and funnels for quality leads — starting ₹7,499/month
-- [Meta & Google Ads](https://orbitpixelstudio.in/services.html#ads): Targeted ad campaign management — starting ₹4,999/month management fee (ad spend separate)
-- [Graphic Design](https://orbitpixelstudio.in/services.html#design): Brand identity and marketing design — starting ₹499/design
-- [Video Editing](https://orbitpixelstudio.in/services.html#video-edit): Professional content editing — starting ₹799/video
-- [Video Shoot](https://orbitpixelstudio.in/services.html#video-shoot): On-location video shoots, up to 2 hours — starting ₹1,899/session
-- [AI Content Creation](https://orbitpixelstudio.in/services.html#ai-content): AI-powered content and reels — starting ₹999/content
+- [Website Development](https://orbitpixelstudio.in/services/website-development.html): Modern, responsive, high-converting websites — starting ₹9,999/website
+- [SEO](https://orbitpixelstudio.in/services/seo.html): Keyword strategy, on-page SEO, local & Google Business Profile optimization, technical audits, monthly reporting — starting ₹6,999/month
+- [Social Media Marketing](https://orbitpixelstudio.in/services/social-media-marketing.html): Content calendars, reels & posts, community engagement — starting ₹4,999/month
+- [Lead Generation](https://orbitpixelstudio.in/services/lead-generation.html): Funnel design, landing pages, lead capture and follow-up automation — starting ₹7,499/month
+- [Meta & Google Ads](https://orbitpixelstudio.in/services/meta-google-ads.html): Targeted ad campaign management — starting ₹4,999/month management fee (ad spend separate)
+- [Graphic Design & Branding](https://orbitpixelstudio.in/services/graphic-design.html): Logo design, brand identity, social creatives, print & packaging — starting ₹499/design
+- [Video Editing](https://orbitpixelstudio.in/services/video-editing.html): Reels & shorts editing, colour grading, motion graphics — starting ₹799/video
+- [Video Shoot](https://orbitpixelstudio.in/services/video-shoot.html): On-location video shoots, up to 2 hours — starting ₹1,899/session
+- [AI Automation & Content](https://orbitpixelstudio.in/services/ai-automation.html): AI-assisted content, automated lead capture and WhatsApp follow-up — starting ₹999/content
+- [Website Maintenance](https://orbitpixelstudio.in/services/website-maintenance.html): Content updates, performance optimization, uptime & security monitoring, technical support — custom plans
 
 ## Packages
 
@@ -25,11 +26,22 @@ Orbit Pixel Studio brings strategy, creativity and technology together to help b
 ## Pages
 
 - [Home](https://orbitpixelstudio.in/): Overview of services and business focus
-- [Services](https://orbitpixelstudio.in/services.html): Full breakdown of all 9 services with pricing
+- [Services](https://orbitpixelstudio.in/services.html): Overview hub linking to all 10 dedicated service pages
 - [Pricing](https://orbitpixelstudio.in/pricing.html): Package tiers and starting prices
 - [Portfolio](https://orbitpixelstudio.in/portfolio.html): Selected client work
+- [Blog](https://orbitpixelstudio.in/blog.html): Guides on local SEO, website mistakes, branding, content systems, video, AI automation and pricing
 - [About](https://orbitpixelstudio.in/about.html): Mission and philosophy
+- [Service Areas: Navi Mumbai–Karjat Corridor](https://orbitpixelstudio.in/service-areas/navi-mumbai-to-karjat.html): Detailed local coverage for Kalyan, Ambernath, Badlapur, Dombivli, Ulhasnagar and nearby areas
 - [Contact](https://orbitpixelstudio.in/contact.html): Enquiry form, phone, WhatsApp, email
+
+## Selected client work
+
+- [MJ Art Tattoo Studio](https://orbitpixelstudio.in/portfolio/mj-art-studio.html) — Kalyan — website development
+- [SS Interior Studio](https://orbitpixelstudio.in/portfolio/ss-interior-studio.html) — Ambernath — website development
+- [Nail Style Studio Academy (NSSA)](https://orbitpixelstudio.in/portfolio/nssa.html) — Andheri, Mumbai — website development & lead generation
+- [Veena Catering](https://orbitpixelstudio.in/portfolio/veena-catering.html) — Ulhasnagar — website development
+- [Celebrations World](https://orbitpixelstudio.in/portfolio/celebrations-world.html) — Badlapur — website design & branding
+- [Specs Gallery](https://orbitpixelstudio.in/portfolio/specs-gallery.html) — Dombivli — social media marketing
 
 ## Contact
 
@@ -38,4 +50,4 @@ Orbit Pixel Studio brings strategy, creativity and technology together to help b
 - Phone: +91 95290 08060
 - Phone (alternate): +91 77960 16431
 - Email: orbitpixelstudio5@gmail.com
-- Service area: Kalyan, Ambernath, Badlapur, Dombivli, Ulhasnagar, Navi Mumbai, Kharghar, Panvel, Neral and Karjat (Maharashtra, India)
+- Service area: Kalyan, Ambernath, Badlapur, Dombivli, Ulhasnagar, Thane, Navi Mumbai, Kharghar, Panvel, Neral and Karjat (Maharashtra, India)

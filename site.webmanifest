@@ -1,0 +1,27 @@
+{
+  "name": "Orbit Pixel Studio",
+  "short_name": "Orbit Pixel",
+  "description": "Digital solutions studio — websites, SEO, social media marketing, branding, video editing and AI automation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#2E42E8",
+  "icons": [
+    {
+      "src": "/assets/logo/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/logo/favicon-64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/logo/orbit-pixel-favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

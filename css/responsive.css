@@ -36,6 +36,15 @@
   .portfolio-stat-pill{ padding:.55rem .9rem; }
   .work-category-nav{ display:none; }
   .hscroll-card{ width:260px; }
+
+  /* Orbit Casebook — tablet */
+  .cb-featured-grid{ grid-template-columns: 1fr; }
+  .cb-featured-media{ min-height:300px; }
+  .cb-asym-grid{ grid-template-columns: 1fr; }
+  .cb-brand-grid{ grid-template-columns: 1fr; }
+  .cb-video-grid{ grid-template-columns: 1fr; }
+  .cb-more-grid{ grid-template-columns: repeat(2,1fr); }
+  .cb-asym-grid .cb-project:first-child .cb-project-media{ aspect-ratio:4/3; }
   .philosophy-grid{ grid-template-columns: 1fr; }
   .pricing-grid{ grid-template-columns: 1fr; max-width:480px; margin-inline:auto; }
   .price-card.featured{ transform:none; }
@@ -151,6 +160,18 @@
   .mobile-menu-links a{ font-size:1.7rem; }
 
   h2.h-section{ font-size: clamp(1.6rem, 7vw, 2.1rem); }
+
+  /* Orbit Casebook — mobile: one project dominates the screen,
+     everything stacks full-width, no clipped/partial cards. */
+  .cb-filter-bar{ flex-wrap:nowrap; overflow-x:auto; padding-bottom:.3rem; margin-inline:-1.15rem; padding-inline:1.15rem; }
+  .cb-filter-btn{ flex-shrink:0; }
+  .cb-featured-media{ min-height:220px; }
+  .cb-featured-info{ padding: var(--space-4); }
+  .cb-full-project{ min-height:320px; }
+  .cb-project:hover{ transform:none; }
+  .cb-project-media img{ transform:none !important; }
+  .cb-more-grid{ grid-template-columns: 1fr; }
+  .casebook-statement{ font-size:1.05rem; }
 }
 
 @media (max-width: 400px){

@@ -1330,3 +1330,137 @@ hr.hair{ border:none; border-top:1px solid var(--hairline); margin-block: var(--
 .popup-card .form-status{ margin-top:.8rem; }
 .popup-foot-note{ display:flex; align-items:center; gap:.4rem; color: var(--mute-2); font-size:.72rem; margin-top: var(--space-2); }
 .popup-foot-note svg{ width:13px; height:13px; flex-shrink:0; }
+
+/* ============ TEAM PAGE ============ */
+.team-split{
+  display:grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items:start;
+  gap: var(--space-4);
+}
+.team-person{
+  padding: var(--space-4);
+  border-radius: var(--r-lg, 20px);
+  border: 1px solid var(--hairline);
+  background: rgba(255,255,255,0.02);
+  transition: border-color .25s ease, background .25s ease;
+}
+.team-person:hover, .team-person:focus-visible{
+  border-color: var(--hairline-2);
+  background: rgba(255,255,255,0.035);
+}
+.tp-ankit:hover, .tp-ankit:focus-visible{ box-shadow: 0 0 60px -20px rgba(46,66,232,.35); }
+.tp-harshad:hover, .tp-harshad:focus-visible{ box-shadow: 0 0 60px -20px rgba(255,122,0,.35); }
+.team-avatar{
+  width:84px; height:84px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-family: var(--font-display); font-size:1.4rem; font-weight:600; color:#fff;
+  background: var(--spectrum);
+}
+.team-role-tag{
+  display:inline-block; margin-top:1rem;
+  font-family: var(--font-mono); font-size:.72rem; text-transform:uppercase; letter-spacing:.08em;
+  color: var(--mute-2);
+}
+.team-title{ color: var(--mute); font-size:.92rem; margin-top:.15rem; }
+.team-bio{ color: var(--mute); font-size:.95rem; margin-top:1rem; max-width:44ch; }
+.team-tags{ display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1.2rem; }
+.team-tag{
+  padding:.4rem .8rem; border-radius: var(--r-pill); font-size:.78rem;
+  border:1px solid var(--hairline-2); color: var(--mute);
+}
+.team-tag.primary{ color:#fff; border-color: transparent; background: rgba(255,255,255,0.08); }
+.team-divider{
+  display:flex; align-items:center; justify-content:center;
+  font-family: var(--font-display); font-size:1.6rem; color: var(--mute-2);
+  padding-top: var(--space-4);
+}
+.system-flow{
+  display:flex; align-items:center; justify-content:center; flex-wrap:wrap;
+  gap: 1rem; margin-top: var(--space-4);
+}
+.system-flow-card{
+  padding: 1.2rem 1.5rem; text-align:center; min-width:180px;
+}
+.system-flow-label{ display:block; font-family: var(--font-mono); font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; color: var(--mute-2); margin-bottom:.4rem; }
+.system-flow-card strong{ font-family: var(--font-display); font-size:1rem; }
+.system-flow-final{ border-color: var(--hairline-2); background: rgba(255,255,255,0.04); }
+.system-flow-arrow{ color: var(--mute-2); font-size:1.3rem; }
+.matrix{ display:flex; flex-direction:column; border-top:1px solid var(--hairline); margin-top:var(--space-3); }
+.matrix-row{
+  display:grid; grid-template-columns: 2fr 1fr 1fr; align-items:center;
+  gap:1rem; padding: .85rem 0; border-bottom:1px solid var(--hairline);
+}
+.matrix-head{ color: var(--mute-2); font-family: var(--font-mono); font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; }
+.matrix-area{ font-size:.92rem; }
+.matrix-col{ text-align:center; }
+.matrix-pill{
+  display:inline-block; padding:.3rem .7rem; border-radius: var(--r-pill); font-size:.76rem;
+  border:1px solid var(--hairline-2); color: var(--mute);
+}
+.matrix-pill.primary{ color:#fff; background: rgba(139,47,240,.18); border-color: rgba(139,47,240,.4); }
+.matrix-pill.support{ color: var(--mute); background: rgba(255,255,255,.04); }
+.matrix-pill.dash{ color: var(--mute-2); border-color: transparent; }
+@media (max-width: 760px){
+  .team-split{ grid-template-columns: 1fr; }
+  .team-divider{ padding-top:0; }
+  .matrix-row{ grid-template-columns: 1.4fr 1fr 1fr; gap:.5rem; }
+  .matrix-area{ font-size:.82rem; }
+}
+
+/* ============ ORBIT SYSTEM (homepage) ============ */
+.orbit-system-stages{
+  max-width: 760px; margin-inline:auto; margin-top: var(--space-4);
+  display:flex; flex-direction:column; gap:.7rem;
+}
+.orbit-stage{
+  border:1px solid var(--hairline); border-radius:14px;
+  background: rgba(255,255,255,0.02);
+  overflow:hidden;
+}
+.orbit-stage[open]{ border-color: var(--hairline-2); background: rgba(255,255,255,0.035); }
+.orbit-stage summary{
+  list-style:none; cursor:pointer;
+  display:flex; align-items:center; gap:1rem;
+  padding: 1.1rem 1.3rem;
+  font-family: var(--font-display); font-size:1.05rem;
+}
+.orbit-stage summary::-webkit-details-marker{ display:none; }
+.orbit-stage .os-num{ font-family: var(--font-mono); color: var(--mute-2); font-size:.8rem; }
+.orbit-stage .os-title{ flex:1; }
+.orbit-stage .os-chevron{ color: var(--mute-2); font-size:1.2rem; transition: transform .2s ease; }
+.orbit-stage[open] .os-chevron{ transform: rotate(45deg); }
+.orbit-stage p{ padding: 0 1.3rem 1rem 3.1rem; color: var(--mute); font-size:.92rem; max-width:56ch; }
+.os-tags{ display:flex; flex-wrap:wrap; gap:.5rem; padding: 0 1.3rem 1.2rem 3.1rem; }
+.os-tags span{ padding:.35rem .75rem; border-radius: var(--r-pill); font-size:.76rem; border:1px solid var(--hairline-2); color: var(--mute); }
+
+/* ============ ORBIT CASEBOOK (portfolio case study pages) ============ */
+.casebook-section{ margin-top: var(--space-6); }
+.casebook-section:first-child{ margin-top:0; }
+.casebook-label{
+  display:flex; align-items:center; gap:.7rem; margin-bottom:1rem;
+}
+.casebook-label .num{ font-family:var(--font-mono); font-size:.75rem; color:var(--mute-2); border:1px solid var(--hairline-2); border-radius:var(--r-pill); padding:.25rem .65rem; }
+.casebook-label h3{ font-family:var(--font-display); font-size:1.3rem; }
+.casebook-section p{ color:var(--mute); font-size:.98rem; line-height:1.7; max-width:66ch; }
+.casebook-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap: var(--space-4); margin-top:1rem; }
+.casebook-card{ padding: var(--space-4); border-radius:var(--r-lg); border:1px solid var(--hairline); background:rgba(255,255,255,0.02); }
+.casebook-card h4{ font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--mute-2); margin-bottom:.5rem; }
+.casebook-card p{ color:var(--ink); font-size:.92rem; margin:0; }
+.result-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem; margin-top:1rem; }
+.result-chip{ padding: var(--space-3) var(--space-4); border-radius:var(--r-lg); border:1px solid var(--hairline-2); background:rgba(255,255,255,0.03); }
+.result-chip span{ display:block; font-family:var(--font-mono); font-size:.7rem; text-transform:uppercase; letter-spacing:.07em; color:var(--mute-2); margin-bottom:.3rem; }
+.result-chip strong{ font-family:var(--font-display); font-size:1rem; color:var(--ink); }
+.stack-chips{ display:flex; flex-wrap:wrap; gap:.55rem; margin-top:1rem; }
+.stack-chips span{ font-family:var(--font-mono); font-size:.75rem; padding:.4rem .85rem; border:1px solid var(--hairline-2); border-radius:var(--r-pill); color:var(--mute); }
+.casebook-gallery{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-top:1rem; }
+.casebook-gallery img{ width:100%; border-radius:var(--r-lg); border:1px solid var(--hairline); display:block; object-fit:cover; aspect-ratio:4/3; }
+.casebook-gallery .gallery-mono{ display:flex; align-items:center; justify-content:center; aspect-ratio:4/3; border-radius:var(--r-lg); border:1px solid var(--hairline); background:var(--deep); font-family:var(--font-display); font-size:1.6rem; color:rgba(255,255,255,.7); }
+.related-work-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap: var(--space-4); margin-top:1rem; }
+.related-work-card{ padding: var(--space-4); border-radius:var(--r-lg); border:1px solid var(--hairline); background:rgba(255,255,255,0.02); text-decoration:none; display:block; transition: border-color .25s ease, background .25s ease; }
+.related-work-card:hover{ border-color:var(--hairline-2); background:rgba(255,255,255,0.04); }
+.related-work-card .work-cat{ font-family:var(--font-mono); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--mute-2); }
+.related-work-card h4{ font-family:var(--font-display); font-size:1.05rem; margin-top:.4rem; }
+@media (max-width:760px){
+  .casebook-grid{ grid-template-columns:1fr; }
+}

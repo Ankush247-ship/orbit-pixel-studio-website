@@ -37,6 +37,10 @@
   .work-category-nav{ display:none; }
   .hscroll-card{ width:260px; }
 
+  .ledger-legend,
+  .ledger-row{ grid-template-columns: 60px 64px 1fr 120px 36px; }
+  .ledger-thumb{ width:60px; height:60px; }
+
   /* Orbit Casebook — tablet */
   .cb-featured-grid{ grid-template-columns: 1fr; }
   .cb-featured-media{ min-height:300px; }
@@ -156,6 +160,21 @@
   .hscroll-card:hover .hscroll-media img{ transform:none; }
   .hscroll-card:hover .work-mono-photo{ transform:none; }
   .hscroll-media{ height:170px; }
+
+  /* work ledger on mobile: drop the location column and legend, keep it a tight tappable row */
+  .ledger-legend{ display:none; }
+  .ledger-row{
+    grid-template-columns: 48px 1fr 30px;
+    grid-template-areas: "thumb main arrow" "loc loc loc";
+    padding: .85rem;
+  }
+  .ledger-case{ display:none; }
+  .ledger-thumb{ grid-area: thumb; width:48px; height:48px; }
+  .ledger-main{ grid-area: main; }
+  .ledger-arrow{ grid-area: arrow; width:28px; height:28px; }
+  .ledger-loc{ grid-area: loc; justify-self:start; margin-top:.5rem; padding-left: calc(48px + var(--space-3)); font-size:.74rem; }
+  .ledger-row:hover{ padding-left:.85rem; }
+  .ledger-row:hover .ledger-thumb img{ transform:none; }
 
   .mobile-menu-links a{ font-size:1.7rem; }
 
